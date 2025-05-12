@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About - Grand Lumbini Mandap</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins:wght@300;400;600&display=swap');
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #f0f1f6;
+      color: #333;
+    }
+
+    .hero-section {
+      background: url('https://lh3.googleusercontent.com/gps-cs-s/AC9h4npIjtKH5pLiuSm4wke4IWzP1GZV-E4RaApFhiBHF5uYx_vv6KePIatJTWNqwnlElBn0kdxeFIP271kHoy4N4kkxglaH1azfZ2pxpzoGorUJ-JPSaOdNC23xc_7fljf63_3LSH24=s1360-w1360-h1020-rw') no-repeat center center/cover;
+      position: relative;
+      height: 100vh;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      border-bottom: 5px solid #2c3e50;
+    }
+
+    .hero-section h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 3.5rem;
+      margin-bottom: 20px;
+      text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+    }
+
+    .hero-section p {
+      font-size: 1.2rem;
+      text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+    }
+
+   .about-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Creates two equal-width columns */
+  gap: 1px; /* Space between the text and image */
+  padding: 40px 20px 20px; /* Reduced top and bottom padding */
+  max-width: 1200px;
+  margin: -50px auto 0;
+  background-color: #fff;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+  align-items: stretch; /* Ensures equal height for both columns */
+  height: auto; /* Allow the height to adjust automatically */
+  max-height: 700px; /* Optional: Set a maximum height */
+}
+
+
+.about-text {
+  padding: 40px;
+  min-width: 300px;
+}
+
+.about-text h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #2c3e50;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 600;
+}
+
+.about-text p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #555;
+  margin-bottom: 15px;
+  text-align: justify; /* This line makes the text evenly distributed */
+}
+
+.text-yellow-400 {
+  color: #cfb80e;
+  font-weight: 700;
+}
+
+.about-image {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; 
+  padding: 40px 10px 10px; /* Add more padding at the top */
+  min-width: 300px;
+}
+
+
+.about-image img {
+  width: 100%;
+  height: 80%; /* Makes the image container match the height of the text */
+  object-fit: cover; /* Ensures image fills the container without distortion */
+  border-radius: 10px;
+  box-shadow: 0 6px 30px rgba(0, 0, 0, 0.15);
+  transition: transform 0.4s ease;
+}
+
+.about-image img:hover {
+  transform: scale(1.15);
+}
+
+.feature-section {
+  padding: 30px 20px;
+  background-color: #f5f5f5;
+  
+}
+
+.feature-section h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: #b8860b;
+  text-transform: uppercase;
+  font-family: 'Bangers', system-ui, sans-serif;
+}
+
+.feature-container {
+  display: flex;
+  gap: 40px;
+  max-width: 1400px;
+  margin: auto;
+  flex-wrap: wrap;
+}
+
+/* Image section takes 90% */
+.left-card {
+  flex: 9;
+  min-width: 300px;
+  max-width: 90%;
+  background-color: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.left-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Cards section takes 10% */
+.right-cards {
+  flex: 3;
+  display: flex;
+  flex-direction: column; /* Stack cards vertically */
+  gap: 15px;
+  width: 100%;
+  padding: 0 20px;
+}
+
+.small-card {
+  background-color: #9f1239;
+  color: #fff;
+  padding: 12px;
+  text-align: center;
+  border-radius: 8px;
+  font-size: 18px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  width: 100%; /* Ensure card takes full width */
+}
+
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+
+  .hero-section {
+    height: auto;
+    padding: 80px 20px 60px;
+    text-align: center;
+  }
+
+  .hero-section h2 {
+    font-size: 2rem;
+  }
+
+  .hero-section p {
+    font-size: 1rem;
+  }
+
+  .about-section {
+    grid-template-columns: 1fr;
+    margin: 0 10px;
+    padding: 20px;
+    max-height: none;
+  }
+
+  .about-text {
+    padding: 20px;
+  }
+
+  .about-text h3 {
+    font-size: 1.8rem;
+    text-align: center;
+  }
+
+  .about-text p {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+
+  .about-image {
+    padding: 10px 0;
+  }
+
+  .about-image img {
+    height: auto;
+    max-height: 300px;
+  }
+
+  .feature-section h2 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+  }
+
+  .feature-container {
+    flex-direction: column;
+    gap: 20px;
+    padding: 0 10px;
+  }
+
+  .left-card {
+    max-width: 100% !important;
+  }
+
+  .right-cards {
+    width: 100%;
+    padding: 0;
+  }
+
+  .small-card {
+    font-size: 1rem;
+    padding: 10px;
+  }
+}
+
+
+  </style>
+</head>
+<body>
+
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div>
+      <h2>Welcome to Grand Lumbini Convention</h2>
+      <p>Experience the perfect blend of elegance and tradition. Make your events unforgettable with us!</p>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="about-section">
+    <div class="about-text">
+      <h3>About Us</h3>
+      <p>
+        <span class="text-yellow-400">GRAND LUMBINI CONVENTION</span>, a unit of Seva Resorts and Estates Private Limited (established on 29th July 1998), stands as one of Bhubaneswar’s most elegant and trusted venues for memorable celebrations. Nestled in a well-connected location, our venue offers a stunning fusion of tradition and modernity. Whether you're planning a wedding, engagement, birthday party, thread ceremony, or corporate event, our fully air-conditioned banquet hall and beautiful outdoor lawn provide the perfect setting.
+      </p>
+      <p>
+        Our experienced team ensures a seamless experience from start to finish, taking care of every detail to deliver a flawless event. Backed by warm hospitality and unmatched attention to detail, Grand Lumbini Mandap continues to set the standard for event venues in Odisha.
+      </p>
+    </div>
+
+    <div class="about-image">
+      <img src="https://lh3.googleusercontent.com/gps-cs-s/AC9h4npIjtKH5pLiuSm4wke4IWzP1GZV-E4RaApFhiBHF5uYx_vv6KePIatJTWNqwnlElBn0kdxeFIP271kHoy4N4kkxglaH1azfZ2pxpzoGorUJ-JPSaOdNC23xc_7fljf63_3LSH24=s1360-w1360-h1020-rw" alt="Grand Lumbini Mandap Building">
+    </div>
+  </section>
+<!-- Ground Floor Features -->
+<!-- Ground Floor Features -->
+<section class="feature-section text-center bg-[#9f1239] text-white py-10">
+  <h2 class="text-6xl font-semibold mt-4">Ground Floor Facilities</h2>
+  <div class="feature-container flex flex-col md:flex-row items-center justify-center mt-8 gap-6">
+    <div class="left-card" style="flex: 5; max-width: 70%;">
+      <img src="groundfloor.jpeg" alt="Ground Floor Image" class="w-full h-full object-cover rounded-lg shadow-lg">
+    </div>
+    <div class="right-cards space-y-2" style="flex: 3;">
+      <div class="small-card text-xl p-3 rounded">Air Conditioned Hall</div>
+      <div class="small-card text-xl p-3 rounded">Hall Capacity (1 Halls)</div>
+      <div class="small-card text-xl p-3 rounded">Attached Bride and Groom Room</div>
+      <div class="small-card text-xl p-3 rounded">Air Conditioned Corridor</div>
+      <div class="small-card text-xl p-3 rounded">Air Conditioned Dining Hall</div>
+      <div class="small-card text-xl p-3 rounded">Parking Arrangement</div>
+      <div class="small-card text-xl p-3 rounded">Make Shift Vibhav Mandap with Hawan Kunda</div>
+      <div class="small-card text-xl p-3 rounded">Open Lawns & Podium for Announcement</div>
+      <div class="small-card text-xl p-3 rounded">Open Space Inside Campus</div>
+      <div class="small-card text-xl p-3 rounded">Furniture Rental & Alternative Chair for Bride&Groom</div>
+      <div class="small-card text-xl p-3 rounded">Floral Decoration & Arrangement</div>
+      <div class="small-card text-xl p-3 rounded">Lighting Design and Facility</div>
+      <div class="small-card text-xl p-3 rounded">Catering Services</div>
+      <div class="small-card text-xl p-3 rounded">Security Grid at Front Gate</div>
+      <div class="small-card text-xl p-3 rounded">Unlimited Power Supply</div>
+    </div>
+  </div>
+</section>
+
+<section class="feature-section text-center bg-[#9f1239] text-white py-10 mt-0">
+  <h2 class="text-6xl font-semibold mt-0">First Floor Facilities</h2>
+  <div class="feature-container flex flex-col md:flex-row items-center justify-center mt-8 gap-6">
+    <div class="left-card" style="flex: 5; max-width: 70%;">
+      <img src="mrg2.jpg" alt="Ground Floor Image" class="w-full h-full object-cover rounded-lg shadow-lg">
+    </div>
+    <div class="right-cards space-y-2" style="flex: 3;">
+      <div class="small-card text-xl p-3 rounded">Air Conditioned Hall</div>
+      <div class="small-card text-xl p-3 rounded">Hall Capacity (1 Halls)</div>
+      <div class="small-card text-xl p-3 rounded">Attached Bride and Groom Room</div>
+      <div class="small-card text-xl p-3 rounded">Air Conditioned Corridor</div>
+      <div class="small-card text-xl p-3 rounded">Air Conditioned Dining Hall</div>
+      <div class="small-card text-xl p-3 rounded">Parking Arrangement</div>
+      <div class="small-card text-xl p-3 rounded">Make Shift Vibhav Mandap with Hawan Kunda</div>
+      <div class="small-card text-xl p-3 rounded">Open Lawns & Podium for Announcement</div>
+      <div class="small-card text-xl p-3 rounded">Open Space Inside Campus</div>
+      <div class="small-card text-xl p-3 rounded">Furniture Rental & Alternative Chair for Bride&Groom</div>
+      <div class="small-card text-xl p-3 rounded">Floral Decoration & Arrangement</div>
+      <div class="small-card text-xl p-3 rounded">Lighting Design and Facility</div>
+      <div class="small-card text-xl p-3 rounded">Catering Services</div>
+      <div class="small-card text-xl p-3 rounded">Security Grid at Front Gate</div>
+      <div class="small-card text-xl p-3 rounded">Unlimited Power Supply</div>
+    </div>
+  </div>
+</section>
+
+</body>
+</html>

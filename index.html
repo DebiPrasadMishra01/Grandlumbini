@@ -1,0 +1,1327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grand Lumbini Convention | Luxury Wedding Venue</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Parisienne&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Merienda:wght@300..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+       
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#C8A951',
+                        secondary: '#F8C3CD',
+                        accent: '#8B0D32',
+                        neutral: '#F9F4E8',
+                        dark: '#2D2B27',
+                        light: '#FFFCF7',
+                    },
+                    fontFamily: {
+                        'cormorant': ['"Cormorant Garamond"', 'serif'],
+                        'montserrat': ['Montserrat', 'sans-serif'],
+                        'dancing': ['"Dancing Script"', 'cursive']
+                    },
+                    backgroundImage: {
+                        'hero-pattern': "url('https://images.unsplash.com/photo-1587271636175-90d58cdad458?q=80&w=2070&auto=format&fit=crop')",
+                        'texture': "url('https://www.transparenttextures.com/patterns/cubes.png')",
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        body, html {
+            overflow-x: hidden;
+            width: 100%;
+            position: relative;
+        }
+        
+        .merienda {
+            font-family: 'Merienda', cursive;
+        }
+
+        .font-cinzel {
+            font-family: 'Cinzel', serif;
+        }
+        
+        .parisienne {
+            font-family: 'Parisienne', cursive;
+        }
+
+        .font-lobster {
+            font-family: 'Lobster', cursive;
+        }
+  
+        .cormorant {
+            font-family: 'Cormorant Garamond', serif;
+        }
+        
+        .text-shadow {
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        
+        .glass-effect {
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .gradient-text {
+            background: linear-gradient(to right, #ffc72c, #e7cf94);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .hover-scale {
+            transition: transform 0.3s ease;
+        }
+        
+        .hover-scale:hover {
+            transform: scale(1.05);
+        }
+        
+        .parallax {
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        
+        @media (max-width: 768px) {
+            .parallax {
+                background-attachment: scroll;
+            }
+        }
+        
+        .gallery-item {
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .gallery-item img {
+            transition: transform 0.5s ease;
+        }
+        
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+        
+        .gallery-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0) 100%);
+            overflow: hidden;
+            width: 100%;
+            height: 0;
+            transition: .5s ease;
+        }
+        
+        .gallery-item:hover .gallery-overlay {
+            height: 100%;
+        }
+        
+        .service-card {
+            transition: all 0.3s ease;
+            border-bottom: 3px solid transparent;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+            border-bottom: 3px solid #C8A951;
+        }
+        
+        .animated-border::after {
+            content: '';
+            display: block;
+            width: 0;
+            height: 2px;
+            background: #C8A951;
+            transition: width .3s;
+        }
+        
+        .animated-border:hover::after {
+            width: 100%;
+        }
+        
+        .custom-shape-divider {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            overflow: hidden;
+            line-height: 0;
+        }
+        
+        .custom-shape-divider svg {
+            position: relative;
+            display: block;
+            width: calc(100% + 1.3px);
+            height: 70px;
+        }
+        
+        .custom-shape-divider .shape-fill {
+            fill: #FFFCF7;
+        }
+        
+        .testimonial-card {
+            transition: all 0.3s ease;
+        }
+        
+        .testimonial-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        
+        .social-icon {
+            transition: all 0.3s ease;
+        }
+        
+        .social-icon:hover {
+            transform: translateY(-5px);
+        }
+        
+        .nav-link {
+            position: relative;
+        }
+        
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            transform: scaleX(0);
+            height: 2px;
+            bottom: -4px;
+            left: 0;
+            background-color: #C8A951;
+            transform-origin: bottom right;
+            transition: transform 0.3s ease-out;
+        }
+        
+        .nav-link:hover::after {
+            transform: scaleX(1);
+            transform-origin: bottom left;
+        }
+        
+        .lightbox {
+            display: none;
+            position: fixed;
+            z-index: 999;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.9);
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .lightbox-content {
+            max-width: 90%;
+            max-height: 90%;
+        }
+        
+        .lightbox-close {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            font-size: 30px;
+            color: white;
+            cursor: pointer;
+        }
+        
+        .lightbox-prev, .lightbox-next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 30px;
+            color: white;
+            cursor: pointer;
+            padding: 16px;
+            background-color: rgba(0,0,0,0.5);
+            border-radius: 50%;
+        }
+        
+        .lightbox-prev {
+            left: 20px;
+        }
+        
+        .lightbox-next {
+            right: 20px;
+        }
+        
+        @media (max-width: 768px) {
+            .lightbox-prev, .lightbox-next {
+                padding: 10px;
+                font-size: 20px;
+            }
+            
+            .lightbox-prev {
+                left: 10px;
+            }
+            
+            .lightbox-next {
+                right: 10px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .mobile-menu-active {
+                overflow: hidden;
+            }
+            
+            .mobile-menu-container {
+                height: 100vh;
+                overflow-y: auto;
+            }
+            
+            .container {
+                padding-left: 1rem;
+                padding-right: 1rem;
+                width: 100%;
+            }
+            
+            section {
+                padding-left: 0;
+                padding-right: 0;
+                overflow: hidden;
+            }
+            
+            .swiper-slide img {
+                width: 100%;
+                height: auto;
+                object-fit: cover;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .touch-target {
+                min-height: 44px;
+                min-width: 44px;
+            }
+        }
+        
+        @media (max-width: 640px) {
+            h1 {
+                font-size: 2.5rem !important;
+            }
+            
+            h2 {
+                font-size: 2rem !important;
+            }
+            
+            h3 {
+                font-size: 1.5rem !important;
+            }
+            
+            p {
+                font-size: 1rem !important;
+            }
+        }
+
+        
+
+        @keyframes kenburns {
+            0% {
+                transform: scale(1.4) translate(-5%, -5%);
+            }
+            50% {
+                transform: scale(1.5) translate(-10%, -10%);
+            }
+            100% {
+                transform: scale(1.4) translate(5%, 5%);
+            }
+        }
+  
+        .swiper-slide {
+            overflow: hidden;
+        }
+  
+        .swiper-slide-active .kenburns-img {
+            animation: kenburns 15s ease-in-out forwards;
+            transform-origin: center;
+        }
+  
+        .kenburns-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .swiper-slide .kenburns-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    animation: none;
+}
+
+.swiper-slide-prev .kenburns-img,
+.swiper-slide-next .kenburns-img,
+.swiper-slide-active .kenburns-img {
+    animation: kenburns 15s ease-in-out forwards;
+    transform-origin: center;
+}
+
+         /* Hide scrollbar for Chrome, Safari, and Opera */
+  @media (min-width: 768px) {
+    #service-carousel::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
+  /* Hide scrollbar for IE, Edge and Firefox */
+  @media (min-width: 768px) {
+    #service-carousel {
+      -ms-overflow-style: none; /* IE and Edge */
+      scrollbar-width: none; /* Firefox */
+    }
+  }
+    </style>
+
+  
+</head>
+<body class="bg-light">
+    <!-- Preloader -->
+    <div id="preloader" class="fixed inset-0 bg-light z-50 flex items-center justify-center">
+        <div class="animate-spin rounded-full h-32 w-32 border-t-2 border-b-2 border-primary"></div>
+    </div>
+
+    <nav class="bg-white backdrop-blur-md shadow-md fixed top-0 left-0 w-full z-50 h-13 flex items-center transition-all duration-300 font-cormorant" id="navbar">
+        <div class="container mx-auto px-4 sm:px-6 py-2 flex justify-between items-center">
+            <!-- Logo and Title Section -->
+            <a href="#" class="text-[18px] sm:text-2xl font-bold flex flex-col items-start" style="color: #DAA520;">
+                GRAND LUMBINI CONVENTION
+                <span class="text-sm sm:text-lg text-rose-600 mt-1" style="margin-left: 50px;">
+                    ଗ୍ରାଣ୍ଡ ଲୁମ୍ବିନୀ କନଭେନ୍ସନ୍
+                </span>
+            </a>
+    
+            <!-- Navigation Links -->
+            <div class="hidden md:flex space-x-4 sm:space-x-6 lg:space-x-8 text-sm md:text-base">
+                <a href="#home" class="text-[#DAA520] font-bold hover:text-primary transition-all duration-300 nav-link">HOME</a>
+                <a href="about.html" class="text-dark font-bold hover:text-primary transition-all duration-300 nav-link">ABOUT</a>
+                <a href="#services" class="text-dark font-bold hover:text-primary transition-all duration-300 nav-link">SERVICES</a>
+                <a href="#gallery" class="text-[#DAA520] font-bold hover:text-primary transition-all duration-300 nav-link">GALLERY</a>
+                <a href="#contact" class="text-dark font-bold hover:text-primary transition-all duration-300 nav-link">CONTACT</a>
+            </div>
+        </div>
+
+         <button class="md:hidden focus:outline-none touch-target p-2" id="menu-toggle" aria-label="Toggle menu">
+            <div class="w-6 h-0.5 bg-dark mb-1.5 transition-all duration-300"></div>
+            <div class="w-6 h-0.5 bg-dark mb-1.5 transition-all duration-300"></div>
+            <div class="w-6 h-0.5 bg-dark transition-all duration-300"></div>
+        </button>
+    </div>
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden bg-light shadow-lg absolute top-full left-0 right-0 z-20 transition-all duration-300 transform -translate-y-full mobile-menu-container">
+        <div class="container mx-auto px-6 py-6 space-y-6">
+            <a href="#home" class="block text-dark hover:text-primary transition-all duration-300 py-3 border-b border-gray-100 text-lg">Home</a>
+            <a href="#about" class="block text-dark hover:text-primary transition-all duration-300 py-3 border-b border-gray-100 text-lg">About</a>
+            <a href="#services" class="block text-dark hover:text-primary transition-all duration-300 py-3 border-b border-gray-100 text-lg">Services</a>
+            <a href="#gallery" class="block text-dark hover:text-primary transition-all duration-300 py-3 border-b border-gray-100 text-lg">Gallery</a>
+            <a href="#testimonials" class="block text-dark hover:text-primary transition-all duration-300 py-3 border-b border-gray-100 text-lg">Testimonials</a>
+            <a href="#contact" class="block text-dark hover:text-primary transition-all duration-300 py-3 text-lg">Contact</a>
+            
+            <!-- Mobile Social Icons -->
+            <div class="pt-4 flex justify-center space-x-6">
+                <a href="#" class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center text-primary hover:bg-primary hover:text-light transition-all duration-300">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="#" class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center text-primary hover:bg-primary hover:text-light transition-all duration-300">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="#" class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center text-primary hover:bg-primary hover:text-light transition-all duration-300">
+                    <i class="fab fa-pinterest"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</nav>
+    <!-- Hero Section -->
+    <section id="home" class="relative min-h-screen flex items-center justify-center bg-white pt-16 md:pt-20 overflow-hidden">
+        <!-- Swiper Background Slider -->
+        <div class="absolute inset-0 z-0 w-full h-full">
+            <div class="swiper mySwiper w-full h-full">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="mrg1.jpg"
+                            alt="Slide 1" class="kenburns-img" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="mrg2.jpg"
+                            alt="Slide 2" class="kenburns-img" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="mrg3.jpg"
+                            alt="Slide 3" class="kenburns-img" />
+                    </div>
+                </div>
+            </div>
+        </div>
+          
+        <!-- Dark Overlay -->
+        <div class="absolute inset-0 bg-black/60 z-0"></div>
+    
+        <!-- Hero Content -->
+        <div class="container mx-auto px-4 z-10 text-center rounded-[8rem]">
+            <div data-aos="fade-up" data-aos-duration="1000" class="">
+                <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-5xl font-bold text-white cormorant leading-tight text-shadow">
+                    <span class="parisienne text-7xl">W</span>ELCOME TO <span class="text-primary">GRAND LUMBINI</span> CONVENTION
+                </h1>
+                
+                <!-- Contact Info with Font Awesome Icons -->
+                <div class="mt-4 text-white text-sm sm:text-base space-y-1">
+                    <p>
+                        <i class="fas fa-phone-alt text-xl sm:text-2xl text-[#DAA520]"></i> 
+                        <a href="tel:+91 90909 64070" class="text-white hover:underline font-bold text-lg sm:text-2xl ml-2">+91 90909 64070</a>
+                    </p>
+                    <p>
+                       <i class="fas fa-envelope text-xl sm:text-2xl text-[#DAA520]"></i> 
+                        <a href="mailto:grandlumbini@gmail.com" target="_blank" class="text-white hover:underline font-bold text-lg sm:text-2xl ml-2">
+                          grandlumbini@gmail.com 
+                    </p>
+
+                </div>
+        
+                <div class="mt-6 sm:mt-8 flex flex-col sm:flex-row justify-center gap-4">
+                <a href="https://wa.me/+919090964070" target="_blank"
+                 class="px-6 py-3 bg-[#f70511] text-white rounded-full font-medium hover:bg-yellow-600 transition-all duration-300 shadow-lg transform hover:-translate-y-1 text-2xl">
+                <span class="flex items-center justify-center">
+                <span>Book Now</span>
+                </span>
+                </a>
+                </div>
+                
+            </div>
+        </div>
+        
+        <!-- Scroll down icon -->
+        <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce z-10">
+            <a href="#about" class="text-[#DAA520]">
+                <i class="fas fa-chevron-down text-3xl"></i>
+            </a>
+        </div>
+    </section>
+    
+    <!-- Services Section -->
+    <section id="services" class="relative py-16 sm:py-20 px-4 bg-[url('mrg2.jpg')] bg-cover bg-center bg-no-repeat">
+        <!-- Light white overlay with less opacity -->
+        <div class="absolute inset-0 bg-black/40 backdrop-blur-sm"></div>
+      
+        <!-- Content container placed above background -->
+        <div class="relative max-w-7xl mx-auto text-center mb-10 sm:mb-16">
+            <h2 class="text-3xl md:text-4xl lg:text-6xl font-cinzel text-yellow-400 mb-4">
+                Our Royal Services
+            </h2>
+            <p class="text-base sm:text-lg text-white drop-shadow-[0_1px_2px_rgba(255,255,255,0.7)]">
+                We bring your wedding dreams to life with elegance, tradition, and grandeur.
+            </p>
+        </div>
+        
+        <!-- Outer Carousel & Buttons Container -->
+        <div class="relative flex items-center justify-center">
+            <!-- Left Button Outside -->
+            <button onclick="scrollCarousel('left')" class="z-10 mr-2 -ml-4 sm:-ml-10 bg-rose-800 text-white p-2 sm:p-3 rounded-full shadow-md hover:bg-rose-700 transition">
+                <svg class="w-4 h-4 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+                </svg>
+            </button>
+      
+            <!-- Carousel Wrapper -->
+            <div class="max-w-[90%] sm:max-w-[94%] overflow-x-auto flex space-x-4 sm:space-x-6 snap-x snap-mandatory scroll-smooth pb-6" id="service-carousel">
+                <!-- Wedding Ceremony -->
+              
+                <div class="flex-shrink-0 w-72 sm:w-80 h-99 snap-start">
+                    <div class="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-transform transform hover:scale-105 border-l-4 border-yellow-500 p-4 sm:p-6 h-full flex flex-col">
+                        <img src="mrg8.jpg" class="rounded-sm mb-4 w-full h-60 sm:h-80 object-cover" alt="Private Party">
+                        <h3 class="text-xl sm:text-2xl font-semibold text-rose-800 mb-2">Wedding Ceremony</h3>
+                        <p class="text-gray-600 mb-4 flex-grow text-sm sm:text-base"><i>Elegant and personalized private events for any special gathering.</i></p>
+                        <a href="wedding.html" class="inline-block bg-yellow-600 text-white px-4 py-2 rounded hover:bg-rose-700 transition text-xl sm:text-xl">Explore More Images</a>
+                    </div>
+                </div>
+
+                <!-- Private Party -->
+                <div class="flex-shrink-0 w-72 sm:w-80 h-99 snap-start">
+                    <div class="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-transform transform hover:scale-105 border-l-4 border-yellow-500 p-4 sm:p-6 h-full flex flex-col">
+                        <img src="privateparty1.jpg" class="rounded-sm mb-4 w-full h-60 sm:h-80 object-cover" alt="Private Party">
+                        <h3 class="text-xl sm:text-2xl font-semibold text-rose-800 mb-2">Private Party</h3>
+                        <p class="text-gray-600 mb-4 flex-grow text-sm sm:text-base"><i>Elegant and personalized private events for any special gathering.</i></p>
+                        <a href="privateparty.html" class="inline-block bg-yellow-600 text-white px-4 py-2 rounded hover:bg-rose-700 transition text-xl sm:text-xl">Explore More Images</a>
+                    </div>
+                </div>
+              
+                <!-- Corporate Party -->
+                <div class="flex-shrink-0 w-72 sm:w-80 snap-start">
+                    <div class="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-transform transform hover:scale-105 border-l-4 border-yellow-500 p-4 sm:p-6 h-full flex flex-col">
+                        <img src="meeting1.jpg" class="rounded-sm mb-4 w-full h-60 sm:h-80 object-cover" alt="Corporate Party">
+                        <h3 class="text-xl sm:text-2xl font-semibold text-rose-800 mb-2">Corporate Meetings & Party</h3>
+                        <p class="text-gray-600 mb-4 flex-grow text-sm sm:text-base"><i>Professional, sophisticated events designed for your brand and team.</i></p>
+                        <a href="corporate.html" class="inline-block bg-yellow-600 text-white px-4 py-2 rounded hover:bg-rose-700 transition text-xl sm:text-xl">Explore More Images</a>
+                    </div>
+                </div>
+              
+                <!-- Anniversary / Birthday Party -->
+                <div class="flex-shrink-0 w-72 sm:w-80 snap-start">
+                    <div class="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-transform transform hover:scale-105 border-l-4 border-yellow-500 p-4 sm:p-6 h-full flex flex-col">
+                        <img src="aniversary1.jpg" class="rounded-sm mb-4 w-full h-60 sm:h-80 object-cover" alt="Anniversary Birthday">
+                        <h3 class="text-xl sm:text-2xl font-semibold text-rose-800 mb-2">Anniversary / Birthday</h3>
+                        <p class="text-gray-600 mb-4 flex-grow text-sm sm:text-base"><i>Celebrate life's milestones in style and joy with our expert planning.</i></p>
+                        <a href="aniversary.html" class="inline-block bg-yellow-600 text-white px-4 py-2 rounded hover:bg-rose-700 transition text-xl sm:text-xl">Explore More Images</a>
+                    </div>
+                </div>
+              
+                <!-- Thread Ceremony -->
+                <div class="flex-shrink-0 w-72 sm:w-80 snap-start">
+                    <div class="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-transform transform hover:scale-105 border-l-4 border-yellow-500 p-4 sm:p-6 h-full flex flex-col">
+                        <img src="https://i.pinimg.com/736x/6a/d2/c4/6ad2c4ab6b965d39011eff05b1cf0e04.jpg" class="rounded-sm mb-4 w-full h-60 sm:h-80 object-cover" alt="Thread Ceremony">
+                        <h3 class="text-xl sm:text-2xl font-semibold text-rose-800 mb-2">Thread Ceremony</h3>
+                        <p class="text-gray-600 mb-4 flex-grow text-sm sm:text-base"><i>Traditional thread ceremony arrangements with sacred ambiance and grace.</i></p>
+                        <a href="" class="inline-block bg-yellow-600 text-white px-4 py-2 rounded hover:bg-rose-700 transition text-xl sm:text-xl">Explore More Images</a>
+                    </div>
+                </div>
+              
+                <!-- Kitty Party -->
+                <div class="flex-shrink-0 w-72 sm:w-80 snap-start">
+                    <div class="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-transform transform hover:scale-105 border-l-4 border-yellow-500 p-4 sm:p-6 h-full flex flex-col">
+                        <img src="https://i.pinimg.com/736x/84/6d/14/846d14a5688a56bb8d4154427aa8f79f.jpg" class="rounded-sm mb-4 w-full h-60 sm:h-80 object-cover" alt="Kitty Party">
+                        <h3 class="text-xl sm:text-2xl font-semibold text-rose-800 mb-2">Kitty Party</h3>
+                        <p class="text-gray-600 mb-4 flex-grow text-sm sm:text-base"><i>Chic and delightful kitty parties with customized themes and treats.</i></p>
+                        <a href="" class="inline-block bg-yellow-600 text-white px-4 py-2 rounded hover:bg-rose-700 transition text-xl sm:text-xl">Explore More Images</a>
+                    </div>
+                </div>
+              
+                <!-- Funeral -->
+                <div class="flex-shrink-0 w-72 sm:w-80 snap-start">
+                    <div class="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-transform transform hover:scale-105 border-l-4 border-yellow-500 p-4 sm:p-6 h-full flex flex-col">
+                        <img src="sradha.jpg" class="rounded-sm mb-4 w-full h-60 sm:h-80 object-cover" alt="Funeral">
+                        <h3 class="text-xl sm:text-2xl font-semibold text-rose-800 mb-2">Sradha</h3>
+                        <p class="text-gray-600 mb-4 flex-grow text-sm sm:text-base">Respectful and serene arrangements to honor and remember loved ones.</p>
+                        <a href="sradha.html" class="inline-block bg-yellow-600 text-white px-4 py-2 rounded hover:bg-rose-700 transition text-xl sm:text-xl">Explore More Images</a>
+                    </div>
+                </div>
+            </div>
+      
+            
+            <!-- Right Button Outside -->
+            <button onclick="scrollCarousel('right')" class="z-10 ml-2 -mr-4 sm:-mr-10 bg-rose-800 text-white p-2 sm:p-3 rounded-full shadow-md hover:bg-rose-700 transition">
+                <svg class="w-4 h-4 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                </svg>
+            </button>
+        </div>
+        
+         
+        <!-- Mobile Scroll Indicators -->
+        <div class="flex justify-center mt-6 md:hidden">
+            <div class="flex space-x-2">
+                <span class="w-2 h-2 rounded-full bg-white"></span>
+                <span class="w-2 h-2 rounded-full bg-white/50"></span>
+                <span class="w-2 h-2 rounded-full bg-white/50"></span>
+            </div>
+        </div>
+
+        
+    </section>
+
+    
+
+
+
+     <!-- Additional Services -->
+     <div class="mt-12 sm:mt-16 px-2 grid grid-cols-2 md:grid-cols-5 gap-4 sm:gap-2" data-aos="fade-up" data-aos-delay="400">
+        <div class="bg-[#e3a917] p-4 sm:p-6 rounded-lg shadow-lg text-center hover-scale">
+            <i class="fas fa-spa text-primary text-xl text-white sm:text-4xl mb-2 sm:mb-3"></i>
+            <h4 class="text-base sm:text-2xl font-semibold text-white">Floral Arrangements</h4>
+        </div>
+        <div class="bg-[#e3a917] p-4 sm:p-6 rounded-lg shadow-lg text-center hover-scale">
+            <i class="fas fa-lightbulb text-primary text-white text-xl sm:text-4xl mb-2 sm:mb-3"></i>
+            <h4 class="text-base sm:text-2xl font-semibold text-white">Lighting <br>Design</h4>
+        </div>
+
+        <div class="bg-[#e3a917] p-4 sm:p-6 rounded-lg shadow-lg text-center hover-scale">
+            <i class="fas fa-utensils text-white text-xl sm:text-4xl mb-2 sm:mb-3"></i>
+            <h4 class="text-base sm:text-2xl font-semibold text-white">Catering <br>Services</h4>
+        </div>
+        
+        <div class="bg-[#e3a917] p-4 sm:p-6 rounded-lg shadow-lg text-center hover-scale">
+            <i class="fas fa-chair text-primary text-white text-xl sm:text-4xl mb-2 sm:mb-3"></i>
+            <h4 class="text-base sm:text-2xl font-semibold text-white">Furniture <br>Rental</h4>
+        </div>
+        <div class="bg-[#e3a917] p-4 sm:p-6 rounded-lg shadow-lg text-center hover-scale">
+            <i class="fas fa-camera text-primary text-white text-xl sm:text-4xl mb-2 sm:mb-3"></i>
+            <h4 class="text-base sm:text-2xl font-semibold text-white">Photography Backdrops</h4>
+        </div>
+    </div>
+</div>
+
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="py-16 sm:py-20 bg-light">
+        <div class="container mx-auto px-4 sm:px-6">
+            <div class="text-center mb-10 sm:mb-16" data-aos="fade-up">
+                <h2 class="text-3xl sm:text-4xl md:text-5xl  text-dark font-cinzel relative inline-block">
+                    Our Gallery
+                    <span class="absolute -bottom-3 left-1/2 transform -translate-x-1/2 w-24 h-1 bg-primary"></span>
+                </h2>
+                <p class="mt-6 text-gray-700 max-w-2xl mx-auto text-sm sm:text-base">
+                    Browse through our collection of stunning venues we've created for couples across the country.
+                </p>
+            </div>
+            
+            <!-- Gallery Filter -->
+            <div class="flex flex-wrap justify-center overflow-x-auto gap-2 sm:gap-4 px-2 mb-6 sm:mb-10 scroll-smooth touch-pan-x" data-aos="fade-up" data-aos-delay="200">
+
+  <button class="gallery-filter-btn active whitespace-nowrap px-4 py-2 rounded-full bg-primary text-white hover:bg-primary/80 transition-all duration-300 text-sm sm:text-base">All</button>
+
+  <a href="wedding.html" class="gallery-filter-btn active whitespace-nowrap px-4 py-2 rounded-full bg-primary text-white hover:bg-primary/80 transition-all duration-300 text-sm sm:text-base">Wedding</a>
+
+  <a href="privateparty.html" class="gallery-filter-btn whitespace-nowrap px-4 py-2 rounded-full bg-primary text-white hover:bg-primary/80 transition-all duration-300 text-sm sm:text-base">Private</a>
+
+  <a href="corporate.html" class="gallery-filter-btn whitespace-nowrap px-4 py-2 rounded-full bg-primary text-white hover:bg-primary/80 transition-all duration-300 text-sm sm:text-base">Corporate</a>
+
+  <a href="aniversary.html" class="gallery-filter-btn whitespace-nowrap px-4 py-2 rounded-full bg-primary text-white hover:bg-primary/80 transition-all duration-300 text-sm sm:text-base">Aniversary</a>
+
+  <a href="thread.html" class="gallery-filter-btn whitespace-nowrap px-4 py-2 rounded-full bg-primary text-white hover:bg-primary/80 transition-all duration-300 text-sm sm:text-base">Thread</a>
+
+  <a href="kitty.html" class="gallery-filter-btn whitespace-nowrap px-4 py-2 rounded-full bg-primary text-white hover:bg-primary/80 transition-all duration-300 text-sm sm:text-base">Kitty</a>
+
+  <a href="sradha.html" class="gallery-filter-btn whitespace-nowrap px-4 py-2 rounded-full bg-primary text-white hover:bg-primary/80 transition-all duration-300 text-sm sm:text-base">Sradha</a>
+
+</div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2 sm:gap-2">
+                <!-- Gallery Item 1 -->
+                <div class="gallery-item rounded-xl shadow-lg overflow-hidden" data-aos="zoom-in" data-aos-delay="100" data-category="traditional">
+                    <img src="mrg3.jpg" alt="Traditional Red and Gold Mandap" class="w-full h-56 sm:h-64 md:h-72 object-cover">
+                    <div class="gallery-overlay flex items-center justify-center flex-col p-4">
+                        <!--  <h3 class="text-base sm:text-xl font-semibold text-white cormorant mb-1 sm:mb-2">Traditional Red & Gold</h3> -->
+                          <!--  <p class="text-white/80 text-xs sm:text-sm">Hindu Wedding</p>-->
+                        <button class="mt-2 sm:mt-4 px-3 py-1.5 bg-white/30 backdrop-blur-sm text-white rounded-full text-xs lightbox-trigger touch-target" data-img="mrg3.jpg">
+                            <i class="fas fa-search-plus mr-1"></i> View Larger
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Gallery Item 2 -->
+                <div class="gallery-item rounded-xl shadow-lg overflow-hidden" data-aos="zoom-in" data-aos-delay="200" data-category="modern">
+                    <img src="mrg10.jpg" alt="Modern White Mandap" class="w-full h-56 sm:h-64 md:h-72 object-cover">
+                    <div class="gallery-overlay flex items-center justify-center flex-col p-4">
+                        <!--   <h3 class="text-base sm:text-xl font-semibold text-white cormorant mb-1 sm:mb-2">Modern White & Floral</h3>-->
+                           <!--<p class="text-white/80 text-xs sm:text-sm">Anniversary</p>-->
+                        <button class="mt-2 sm:mt-4 px-3 py-1.5 bg-white/30 backdrop-blur-sm text-white rounded-full text-xs lightbox-trigger touch-target" data-img="2.jpg">
+                            <i class="fas fa-search-plus mr-1"></i> View Larger
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Gallery Item 3 -->
+                <div class="gallery-item rounded-xl shadow-lg overflow-hidden" data-aos="zoom-in" data-aos-delay="300" data-category="fusion">
+                    <img src="mrg11.jpg" alt="Rustic Wooden Mandap" class="w-full h-56 sm:h-64 md:h-72 object-cover">
+                    <div class="gallery-overlay flex items-center justify-center flex-col p-4">
+                        <!--   <h3 class="text-base sm:text-xl font-semibold text-white cormorant mb-1 sm:mb-2">Modern White & Floral</h3>-->
+                           <!--<p class="text-white/80 text-xs sm:text-sm">Anniversary</p>-->
+                           <button class="mt-2 sm:mt-4 px-3 py-1.5 bg-white/30 backdrop-blur-sm text-white rounded-full text-xs lightbox-trigger touch-target" data-img="3.jpg">
+                            <i class="fas fa-search-plus mr-1"></i> View Larger
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Gallery Item 4 -->
+                <div class="gallery-item rounded-xl shadow-lg overflow-hidden" data-aos="zoom-in" data-aos-delay="400" data-category="traditional">
+                    <img src="mrg12.jpg" alt="Luxury Crystal Mandap" class="w-full h-56 sm:h-64 md:h-72 object-cover">
+                    <div class="gallery-overlay flex items-center justify-center flex-col p-4">
+                           <!--   <h3 class="text-base sm:text-xl font-semibold text-white cormorant mb-1 sm:mb-2">Modern White & Floral</h3>-->
+                           <!--<p class="text-white/80 text-xs sm:text-sm">Anniversary</p>-->
+                       <button class="mt-2 sm:mt-4 px-3 py-1.5 bg-white/30 backdrop-blur-sm text-white rounded-full text-xs lightbox-trigger touch-target" data-img="5.jpg">
+                            <i class="fas fa-search-plus mr-1"></i> View Larger
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Gallery Item 5 -->
+                <div class="gallery-item rounded-xl shadow-lg overflow-hidden" data-aos="zoom-in" data-aos-delay="500" data-category="modern">
+                    <img src="mrg13.jpg" alt="Garden Themed Mandap" class="w-full h-56 sm:h-64 md:h-72 object-cover">
+                    <div class="gallery-overlay flex items-center justify-center flex-col p-4">
+                      <!--  <h3 class="text-base sm:text-xl font-semibold text-white cormorant mb-1 sm:mb-2">Garden Theme</h3> -->
+                      <!--  <p class="text-white/80 text-xs sm:text-sm">Spring Wedding, Atlanta</p>-->
+                        <button class="mt-2 sm:mt-4 px-3 py-1.5 bg-white/30 backdrop-blur-sm text-white rounded-full text-xs lightbox-trigger touch-target" data-img="img5.jpg">
+                            <i class="fas fa-search-plus mr-1"></i> View Larger
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Gallery Item 6 -->
+                <div class="gallery-item rounded-xl shadow-lg overflow-hidden" data-aos="zoom-in" data-aos-delay="600" data-category="fusion">
+                    <img src="6.jpg" alt="Royal Purple Mandap" class="w-full h-56 sm:h-64 md:h-72 object-cover">
+                    <div class="gallery-overlay flex items-center justify-center flex-col p-4">
+                        <!--  <h3 class="text-base sm:text-xl font-semibold text-white cormorant mb-1 sm:mb-2">Royal Purple & Gold</h3> -->
+                        <!-- <p class="text-white/80 text-xs sm:text-sm">Sradha</p>-->
+                        <button class="mt-2 sm:mt-4 px-3 py-1.5 bg-white/30 backdrop-blur-sm text-white rounded-full text-xs lightbox-trigger touch-target" data-img="6.jpg">
+                            <i class="fas fa-search-plus mr-1"></i> View Larger
+                        </button>
+                    </div>
+                </div>
+
+                <div class="gallery-item rounded-xl shadow-lg overflow-hidden" data-aos="zoom-in" data-aos-delay="600" data-category="fusion">
+                    <img src="sradha.jpg" alt="Royal Purple Mandap" class="w-full h-56 sm:h-64 md:h-72 object-cover">
+                    <div class="gallery-overlay flex items-center justify-center flex-col p-4">
+                        <!--   <h3 class="text-base sm:text-xl font-semibold text-white cormorant mb-1 sm:mb-2">Royal Purple & Gold</h3> -->
+                           <!--  <p class="text-white/80 text-xs sm:text-sm">Sradha</p> -->
+                        <button class="mt-2 sm:mt-4 px-3 py-1.5 bg-white/30 backdrop-blur-sm text-white rounded-full text-xs lightbox-trigger touch-target" data-img="sradha.jpg">
+                            <i class="fas fa-search-plus mr-1"></i> View Larger
+                        </button>
+                    </div>
+                </div>
+  
+
+                <div class="gallery-item rounded-xl shadow-lg overflow-hidden" data-aos="zoom-in" data-aos-delay="600" data-category="fusion">
+                    <img src="mrg14.jpg" alt="Royal Purple Mandap" class="w-full h-56 sm:h-64 md:h-72 object-cover">
+                    <div class="gallery-overlay flex items-center justify-center flex-col p-4">
+                        <!--   <h3 class="text-base sm:text-xl font-semibold text-white cormorant mb-1 sm:mb-2">Royal Purple & Gold</h3> -->
+                        <!--  <p class="text-white/80 text-xs sm:text-sm">Sradha</p>-->
+                        <button class="mt-2 sm:mt-4 px-3 py-1.5 bg-white/30 backdrop-blur-sm text-white rounded-full text-xs lightbox-trigger touch-target" data-img="8.jpg">
+                            <i class="fas fa-search-plus mr-1"></i> View Larger
+                        </button>
+                    </div>
+                </div>
+  
+
+                <div class="gallery-item rounded-xl shadow-lg overflow-hidden" data-aos="zoom-in" data-aos-delay="600" data-category="fusion">
+                    <img src="birthday.jpg" alt="Royal Purple Mandap" class="w-full h-56 sm:h-64 md:h-72 object-cover">
+                    <div class="gallery-overlay flex items-center justify-center flex-col p-4">
+                        <!--  <h3 class="text-base sm:text-xl font-semibold text-white cormorant mb-1 sm:mb-2">Royal Purple & Gold</h3>-->
+                        <!--   <p class="text-white/80 text-xs sm:text-sm">Sradha</p> -->
+                        <button class="mt-2 sm:mt-4 px-3 py-1.5 bg-white/30 backdrop-blur-sm text-white rounded-full text-xs lightbox-trigger touch-target" data-img="birthday.jpg">
+                            <i class="fas fa-search-plus mr-1"></i> View Larger
+                        </button>
+                    </div>
+                </div>
+  
+            </div>
+            
+           <!-- <div class="text-center mt-8 sm:mt-16" data-aos="fade-up">
+                <a href="#" class="px-5 sm:px-8 py-2 sm:py-4 border-2 border-primary text-primary rounded-full font-medium hover:bg-primary hover:text-white transition-all duration-300 inline-flex items-center touch-target text-sm sm:text-base">
+                    <span>View Full Gallery</span>
+                    <i class="fas fa-arrow-right ml-2"></i>
+                </a>
+            </div> --> 
+            </div>
+        
+        <!-- Lightbox -->
+        <div class="lightbox">
+            <span class="lightbox-close">&times;</span>
+            <img class="lightbox-content">
+            <span class="lightbox-prev"><i class="fas fa-chevron-left"></i></span>
+            <span class="lightbox-next"><i class="fas fa-chevron-right"></i></span>
+        </div>
+    </section>
+
+    <!-- Parallax Section -->
+    <section class="py-12 sm:py-20 parallax relative flex items-center justify-center" style="background-image: url('https://images.unsplash.com/photo-1587271636175-90d58cdad458?q=80&w=2070&auto=format&fit=crop');">
+        <div class="absolute inset-0 bg-dark/70"></div>
+        <div class="container mx-auto px-4 sm:px-6 z-10 text-center" data-aos="zoom-in">
+            <h2 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white cormorant mb-4">Your Dream Wedding Awaits</h2>
+            <p class="text-base sm:text-lg text-white/80 max-w-2xl mx-auto mb-6 sm:mb-10">
+                Let us transform your wedding venue into a magical space that reflects your love story.
+            </p>
+            <a href="#contact" class="px-5 sm:px-8 py-2 sm:py-4 bg-primary text-white rounded-full font-medium hover:bg-primary/90 transition-all duration-300 shadow-lg inline-flex items-center touch-target text-sm sm:text-base">
+                <span>Start Planning Today</span>
+                <i class="fas fa-heart ml-2"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-20 px-4 bg-gray-50">
+        <div class="max-w-7xl mx-auto text-center mb-12">
+          <h2 class="text-4xl md:text-5xl font-cinzel text-rose-800 mb-4">What Our Clients Say</h2>
+          <p class="text-lg text-gray-600">Real experiences from happy clients who trusted our royal services.</p>
+        </div>
+      
+        <div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-8">
+          <!-- Review Card -->
+          <div class="bg-white rounded-xl shadow-lg p-6 text-left">
+            <div class="flex items-center mb-4">
+              <img src="https://images.unsplash.com/photo-1668238226906-03e306554f13?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="w-12 h-12 rounded-full mr-4" alt="Client Photo">
+              <div>
+                <h3 class="text-xl font-semibold text-rose-800">Kyra Panigrahi</h3>
+                <div class="flex text-yellow-500">
+                  ★★★★★
+                </div>
+              </div>
+            </div>
+            <p class="text-gray-600">Absolutely magical! The wedding decor and arrangements were beyond our expectations. Highly recommend!</p>
+          </div>
+      
+          <!-- Review Card -->
+          <div class="bg-white rounded-xl shadow-lg p-6 text-left">
+            <div class="flex items-center mb-4">
+              <img src="https://images.unsplash.com/photo-1594903833720-f9a68102aae1?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="w-12 h-12 rounded-full mr-4" alt="Client Photo">
+              <div>
+                <h3 class="text-xl font-semibold text-rose-800">Deb Mishra</h3>
+                <div class="flex text-yellow-500">
+                ★★★★★
+                </div>
+              </div>
+            </div>
+            <p class="text-gray-600">Professional, punctual, and creative! Our anniversary party was stunning thanks to the team.</p>
+          </div>
+      
+          <!-- Review Card -->
+          <div class="bg-white rounded-xl shadow-lg p-6 text-left">
+            <div class="flex items-center mb-4">
+              <img src="https://images.unsplash.com/photo-1661875155834-d1871e603ab8?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="w-12 h-12 rounded-full mr-4" alt="Client Photo">
+              <div>
+                <h3 class="text-xl font-semibold text-rose-800">Lisa Pradhan</h3>
+                <div class="flex text-yellow-500">
+                  ★★★★★
+                </div>
+              </div>
+            </div>
+            <p class="text-gray-600">They handled everything beautifully—from entry to catering. It was a stress-free experience!</p>
+          </div>
+        </div>
+      </section>
+              
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 sm:py-20 bg-light relative">
+        <div class="container mx-auto px-4 sm:px-6">
+            <div class="text-center mb-10 sm:mb-16" data-aos="fade-up">
+                <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold text-dark cormorant relative inline-block">
+                    Contact Us
+                    <span class="absolute -bottom-3 left-1/2 transform -translate-x-1/2 w-24 h-1 bg-primary"></span>
+                </h2>
+                <p class="mt-6 text-gray-700 max-w-2xl mx-auto text-sm sm:text-base">
+                    Ready to create your dream event? Get in touch with us to schedule a consultation.
+                </p>
+            </div>
+            <div class="flex flex-col md:flex-row gap-8">
+                <div class="w-full md:w-1/2" data-aos="fade-right">
+                    <form class="space-y-4 bg-light p-5 sm:p-8 rounded-xl shadow-xl">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div>
+                                <label for="name" class="block text-dark mb-2 font-medium text-sm">Your Name</label>
+                                <input type="text" id="name" class="w-full px-4 py-2 sm:py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-300">
+                            </div>
+                            <div>
+                                <label for="email" class="block text-dark mb-2 font-medium text-sm">Email Address</label>
+                                <input type="email" id="email" class="w-full px-4 py-2 sm:py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-300">
+                            </div>
+                        </div>
+                        <div>
+                            <label for="phone" class="block text-dark mb-2 font-medium text-sm">Phone Number</label>
+                            <input type="tel" id="phone" class="w-full px-4 py-2 sm:py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-300">
+                        </div>
+                        <div>
+                            <label for="event-date" class="block text-dark mb-2 font-medium text-sm">Event Date</label>
+                            <input type="date" id="event-date" class="w-full px-4 py-2 sm:py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-300">
+                        </div>
+                        <div>
+                            <label for="message" class="block text-dark mb-2 font-medium text-sm">Your Message</label>
+                            <textarea id="message" rows="4" class="w-full px-4 py-2 sm:py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-300"></textarea>
+                        </div>
+                        <button type="submit" class="w-full px-6 py-3 bg-primary text-white rounded-full font-medium hover:bg-primary/90 transition-all duration-300 shadow-lg hover:shadow-primary/20 hover:shadow-xl transform hover:-translate-y-1 touch-target text-sm sm:text-base">
+                            <span class="flex items-center justify-center">
+                                <span>Send Message</span>
+                                <i class="fas fa-paper-plane ml-2"></i>
+                            </span>
+                        </button>
+                    </form>
+                </div>
+                <div class="w-full md:w-1/2" data-aos="fade-left">
+                    <div class="bg-neutral p-5 sm:p-8 rounded-xl shadow-xl h-full">
+                        <h3 class="text-xl sm:text-2xl font-semibold text-dark cormorant mb-6">Get In Touch</h3>
+                        <div class="space-y-5 sm:space-y-8">
+                            <div class="flex items-start">
+                                <div class="w-10 h-10 bg-primary/20 rounded-full flex items-center justify-center mr-4 flex-shrink-0 text-primary">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-dark mb-1 text-sm sm:text-base">Our Location</h4>
+                                    <p class="text-gray-700 text-xs sm:text-sm">Plot No 321, KENDRIYA VIDYALAY.. 4, GA-P1, Neeladri Vihar, Chandrasekharpur, Bhubaneswar, Odisha 751021</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="w-10 h-10 bg-primary/20 rounded-full flex items-center justify-center mr-4 flex-shrink-0 text-primary">
+                                    <i class="fas fa-phone-alt"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-dark mb-1 text-sm sm:text-base">Phone Number</h4>
+                                    <p class="text-gray-700 text-xs sm:text-sm">+91 90909 64070</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="w-10 h-10 bg-primary/20 rounded-full flex items-center justify-center mr-4 flex-shrink-0 text-primary">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-dark mb-1 text-sm sm:text-base">Email Address</h4>
+                                    <p class="text-gray-700 text-xs sm:text-sm">grandlumbini@gmail.com</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="w-10 h-10 bg-primary/20 rounded-full flex items-center justify-center mr-4 flex-shrink-0 text-primary">
+                                    <i class="fas fa-clock"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-dark mb-1 text-sm sm:text-base">Business Hours</h4>
+                                    <p class="text-gray-700 text-xs sm:text-sm">Monday - Friday: 9am - 6pm<br>Saturday: 10am - 4pm<br>Sunday: Closed</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-6 sm:mt-10">
+                            <h4 class="font-semibold text-dark mb-3 text-sm sm:text-base">Follow Us</h4>
+                            <div class="flex space-x-3">
+                                <a href="#" class="w-9 h-9 sm:w-12 sm:h-12 bg-primary/20 rounded-full flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-all duration-300 social-icon touch-target">
+                                    <i class="fab fa-facebook-f"></i>
+                                </a>
+                                <a href="#" class="w-9 h-9 sm:w-12 sm:h-12 bg-primary/20 rounded-full flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-all duration-300 social-icon touch-target">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                                <a href="#" class="w-9 h-9 sm:w-12 sm:h-12 bg-primary/20 rounded-full flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-all duration-300 social-icon touch-target">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                                <a href="#" class="w-9 h-9 sm:w-12 sm:h-12 bg-primary/20 rounded-full flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-all duration-300 social-icon touch-target">
+                                    <i class="fab fa-pinterest"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+   <!-- Map Section -->
+  <section id="location" class="py-4 px-4 bg-neutral-100 relative">
+    <div class="absolute top-0 left-0 w-full h-20 bg-gradient-to-b from-white to-transparent"></div>
+    <div class="absolute -top-10 left-20 w-40 h-40 bg-amber-400/10 rounded-full blur-3xl"></div>
+    <div class="w-full h-[450px] rounded-2xl overflow-hidden shadow-2xl border-4 border-white relative">
+      <div class="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/50 z-10 pointer-events-none"></div>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3741.461542382832!2d85.8109348!3d20.3225432!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a1909ac76f4bcbb%3A0xbd1e58156df266b2!2sGrand%20Lumbini%20Convention!5e0!3m2!1sen!2sin!4v1746688616044!5m2!1sen!2sin" width="1500" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </section>
+      
+      <!-- Footer -->
+<footer id="page-footer" class="relative w-full bg-black text-white text-center font-[Walbaum]">
+    <!-- Inner Container -->
+    <div class="relative z-10 w-full px-6 py-10">
+  
+  
+      <!-- Company Name -->
+      <h2 class="text-[28px] text-yellow-600 font-bold mb-4">
+        GRAND LUMBINI CONVENTION
+      </h2>
+  
+      <!-- Description -->
+      <p class="text-[19.05px] text-white leading-relaxed mb-4">
+        We will make your dream real From traditional elegance to modern grandeur, our beautifully crafted mandaps create the perfect setting for your special day.
+      </p>
+      
+      <!-- Contact Info -->
+      <div class="flex justify-center items-center flex-wrap gap-4 text-sm mb-4">
+        <div class="flex items-center space-x-2">
+          <i class="fas fa-phone text-yellow-400 text-[17.05px]"></i>
+          <span class="text-white text-[19.05px]">+91 90909 64070</span>
+        </div>
+  
+        <div class="flex items-center space-x-2">
+          <i class="fas fa-envelope text-yellow-400 text-[19.05px]"></i>
+          <span class="text-white text-[19.05px]">grandlumbini@gmail.com</span>
+        </div>
+      </div>
+      <!-- Centered Location Section -->
+<div class="flex justify-center mt-4">
+    <div class="flex items-center space-x-2 text-center">
+        <a href="https://maps.app.goo.gl/N8RY8yGrv2zVi6ET8" target="_blank" class="flex items-center space-x-2">
+      <i class="fas fa-map-marker-alt text-yellow-400 text-[19.05px]"></i>
+      <span class="text-white text-[19.05px]">
+        Plot No 321, KENDRIYA VIDYALAY.. 4, GA-P1, Neeladri Vihar, Chandrasekharpur, Bhubaneswar, Odisha 751021
+      </span>
+    </div>
+  </div>
+  
+      
+  
+      <!-- Navigation Links -->
+      <nav class="flex justify-center flex-wrap gap-6 text-yellow-400 mb-6">
+        <a href="about.html" class="flex items-center gap-1 hover:text-yellow-300">
+          <i class="fa-solid fa-circle text-[0.4rem] text-white-700"></i>
+          <span class="text-[19.05px] ml-2 text-white">About Us</span>
+        </a>
+        <a href="#" class="flex items-center gap-1 hover:text-yellow-300">
+          <i class="fa-solid fa-circle text-[0.4rem] text-white-700"></i>
+          <span class="text-[19.05px] ml-2 text-white">Our Services</span>
+        </a>
+        <a href="#" class="flex items-center gap-1 hover:text-yellow-300">
+          <i class="fa-solid fa-circle text-[0.4rem] text-white-700"></i>
+          <span class="text-[19.05px] ml-2 text-white">Our Gallery</span>
+        </a>
+        <a href="#" class="flex items-center gap-1 hover:text-yellow-300">
+          <i class="fa-solid fa-circle text-[0.4rem] text-white-700"></i>
+          <span class="text-[19.05px] ml-2 text-white">Contact Us</span>
+        </a>
+      </nav>
+  
+      <!-- Social Media Icons -->
+      <div class="flex justify-center space-x-6 mt-6">
+        <a href="#" class=" rounded-full w-9 h-9 flex items-center justify-center text-white text-xl hover:scale-110 transition-transform">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="#" class=" rounded-full w-9 h-9 flex items-center justify-center text-white text-xl hover:scale-110 transition-transform">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="#" class=" rounded-full w-9 h-9 flex items-center justify-center text-white text-xl hover:scale-110 transition-transform">
+            <i class="fa-brands fa-youtube"></i>
+       </a>
+      </div>
+  
+      <!-- Footer -->
+    <footer class="py-6 text-center text-[17px] text-white-500 text-yellow-500">
+      &copy; Copyright Lumbini. All Rights Reserved
+    </footer>
+    </div>
+  </footer>
+  
+    <!-- Back to Top Button -->
+    <a href="#home" class="fixed bottom-6 right-6 bg-primary text-white w-10 h-10 sm:w-14 sm:h-14 rounded-full flex items-center justify-center shadow-lg hover:bg-primary/90 transition-all duration-300 animate-bounce touch-target">
+        <i class="fas fa-chevron-up"></i>
+    </a>
+
+    <!-- Lightbox -->
+    <div class="lightbox">
+        <span class="lightbox-close">&times;</span>
+        <img class="lightbox-content">
+        <span class="lightbox-prev"><i class="fas fa-chevron-left"></i></span>
+        <span class="lightbox-next"><i class="fas fa-chevron-right"></i></span>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        // Initialize AOS
+        document.addEventListener('DOMContentLoaded', function() {
+            AOS.init({
+                duration: 800,
+                easing: 'ease-in-out',
+                once: true,
+                disable: 'mobile' // Disable on mobile for better performance
+            });
+
+            // Preloader
+            setTimeout(function() {
+                document.getElementById('preloader').style.display = 'none';
+            }, 1000);
+
+            // Mobile Menu Toggle
+            const menuToggle = document.getElementById('menu-toggle');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const body = document.body;
+            
+            menuToggle.addEventListener('click', function() {
+                mobileMenu.classList.toggle('hidden');
+                body.classList.toggle('mobile-menu-active');
+                const bars = menuToggle.querySelectorAll('div');
+                
+                if (mobileMenu.classList.contains('hidden')) {
+                    mobileMenu.style.transform = 'translateY(-100%)';
+                    bars[0].style.transform = 'rotate(0) translateY(0)';
+                    bars[1].style.opacity = '1';
+                    bars[2].style.transform = 'rotate(0) translateY(0)';
+                } else {
+                    mobileMenu.style.transform = 'translateY(0)';
+                    bars[0].style.transform = 'rotate(45deg) translateY(6px)';
+                    bars[1].style.opacity = '0';
+                    bars[2].style.transform = 'rotate(-45deg) translateY(-6px)';
+                }
+            });
+
+            // Close mobile menu when clicking on a link
+            const mobileLinks = mobileMenu.querySelectorAll('a');
+            mobileLinks.forEach(link => {
+                link.addEventListener('click', function() {
+                    mobileMenu.classList.add('hidden');
+                    mobileMenu.style.transform = 'translateY(-100%)';
+                    body.classList.remove('mobile-menu-active');
+                    const bars = menuToggle.querySelectorAll('div');
+                    bars[0].style.transform = 'rotate(0) translateY(0)';
+                    bars[1].style.opacity = '1';
+                    bars[2].style.transform = 'rotate(0) translateY(0)';
+                });
+            });
+
+            // Gallery Filter
+            const filterBtns = document.querySelectorAll('.gallery-filter-btn');
+            const galleryItems = document.querySelectorAll('.gallery-item');
+            
+            filterBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    // Remove active class from all buttons
+                    filterBtns.forEach(b => {
+                        b.classList.remove('active', 'bg-primary', 'text-white');
+                        b.classList.add('bg-gray-200', 'text-dark');
+                    });
+                    
+                    // Add active class to clicked button
+                    btn.classList.add('active', 'bg-primary', 'text-white');
+                    btn.classList.remove('bg-gray-200', 'text-dark');
+                    
+                    const filter = btn.getAttribute('data-filter');
+                    
+                    galleryItems.forEach(item => {
+                        if (filter === 'all' || item.getAttribute('data-category') === filter) {
+                            item.style.display = 'block';
+                            setTimeout(() => {
+                                item.style.opacity = '1';
+                                item.style.transform = 'scale(1)';
+                            }, 100);
+                        } else {
+                            item.style.opacity = '0';
+                            item.style.transform = 'scale(0.8)';
+                            setTimeout(() => {
+                                item.style.display = 'none';
+                            }, 300);
+                        }
+                    });
+                });
+            });
+
+            // Lightbox
+            const lightbox = document.querySelector('.lightbox');
+            const lightboxImg = document.querySelector('.lightbox-content');
+            const lightboxClose = document.querySelector('.lightbox-close');
+            const lightboxTriggers = document.querySelectorAll('.lightbox-trigger');
+            const lightboxPrev = document.querySelector('.lightbox-prev');
+            const lightboxNext = document.querySelector('.lightbox-next');
+            
+            let currentImgIndex = 0;
+            const galleryImages = [];
+            
+            lightboxTriggers.forEach((trigger, index) => {
+                const imgSrc = trigger.getAttribute('data-img');
+                galleryImages.push(imgSrc);
+                
+                trigger.addEventListener('click', () => {
+                    lightboxImg.src = imgSrc;
+                    currentImgIndex = index;
+                    lightbox.style.display = 'flex';
+                    document.body.style.overflow = 'hidden';
+                });
+            });
+            
+            lightboxClose.addEventListener('click', () => {
+                lightbox.style.display = 'none';
+                document.body.style.overflow = 'auto';
+            });
+            
+            lightboxPrev.addEventListener('click', () => {
+                currentImgIndex = (currentImgIndex - 1 + galleryImages.length) % galleryImages.length;
+                lightboxImg.src = galleryImages[currentImgIndex];
+            });
+            
+            lightboxNext.addEventListener('click', () => {
+                currentImgIndex = (currentImgIndex + 1) % galleryImages.length;
+                lightboxImg.src = galleryImages[currentImgIndex];
+            });
+            
+            // Close lightbox with Escape key
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape' && lightbox.style.display === 'flex') {
+                    lightbox.style.display = 'none';
+                    document.body.style.overflow = 'auto';
+                }
+            });
+
+            // Smooth scrolling for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    
+                    // Close mobile menu if open
+                    if (!mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                        mobileMenu.style.transform = 'translateY(-100%)';
+                        body.classList.remove('mobile-menu-active');
+                        const bars = menuToggle.querySelectorAll('div');
+                        bars[0].style.transform = 'rotate(0) translateY(0)';
+                        bars[1].style.opacity = '1';
+                        bars[2].style.transform = 'rotate(0) translateY(0)';
+                    }
+                    
+                    const targetId = this.getAttribute('href');
+                    const targetElement = document.querySelector(targetId);
+                    
+                    if (targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 80,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+
+            // Add touch-friendly improvements for mobile
+            if ('ontouchstart' in window || navigator.maxTouchPoints) {
+                // Increase tap target sizes for mobile
+                document.querySelectorAll('.touch-target').forEach(el => {
+                    el.style.minHeight = '44px';
+                    el.style.minWidth = '44px';
+                });
+            }
+        });
+    </script>
+
+    <script>
+      const swiper = new Swiper(".mySwiper", {
+    loop: true,
+    autoplay: {
+        delay: 5000, // Time image stays before changing
+        disableOnInteraction: false,
+    },
+    speed: 6000, // Transition duration: 6 seconds
+    effect: 'fade',
+    fadeEffect: {
+        crossFade: true
+    }
+});
+
+
+    </script>
+    
+    <script>
+        function scrollCarousel(direction) {
+            const carousel = document.getElementById('service-carousel');
+            const scrollAmount = 300; // adjust based on card width + spacing
+            if (direction === 'left') {
+                carousel.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+            } else {
+                carousel.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+            }
+        }
+    </script>
+
+
+</body>
+</html>

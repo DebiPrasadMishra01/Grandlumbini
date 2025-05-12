@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About - Grand Lumbini Mandap</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            'playfair': ['"Playfair Display"', 'serif'],
+            'poppins': ['Poppins', 'sans-serif'],
+            'bangers': ['Bangers', 'system-ui', 'sans-serif'],
+          },
+          colors: {
+            'venue-red': '#9f1239',
+            'venue-gold': '#cfb80e',
+            'venue-dark': '#2c3e50',
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins:wght@300;400;600&family=Bangers&display=swap');
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #f0f1f6;
+      color: #333;
+    }
+
+    .hero-section {
+      background: url('https://lh3.googleusercontent.com/gps-cs-s/AC9h4npIjtKH5pLiuSm4wke4IWzP1GZV-E4RaApFhiBHF5uYx_vv6KePIatJTWNqwnlElBn0kdxeFIP271kHoy4N4kkxglaH1azfZ2pxpzoGorUJ-JPSaOdNC23xc_7fljf63_3LSH24=s1360-w1360-h1020-rw') no-repeat center center/cover;
+      position: relative;
+      height: 100vh;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      border-bottom: 5px solid #2c3e50;
+    }
+
+    .hero-section h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 3.5rem;
+      margin-bottom: 20px;
+      text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+    }
+
+    .hero-section p {
+      font-size: 1.2rem;
+      text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+    }
+
+   .about-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Creates two equal-width columns */
+  gap: 1px; /* Space between the text and image */
+  padding: 40px 20px 20px; /* Reduced top and bottom padding */
+  max-width: 1200px;
+  margin: -50px auto 0;
+  background-color: #fff;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+  align-items: stretch; /* Ensures equal height for both columns */
+  height: auto; /* Allow the height to adjust automatically */
+  max-height: 700px; /* Optional: Set a maximum height */
+}
+
+
+.about-text {
+  padding: 40px;
+  min-width: 300px;
+}
+
+.about-text h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #2c3e50;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 600;
+}
+
+.about-text p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #555;
+  margin-bottom: 15px;
+  text-align: justify; /* This line makes the text evenly distributed */
+}
+
+.text-yellow-400 {
+  color: #cfb80e;
+  font-weight: 700;
+}
+
+.about-image {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; 
+  padding: 40px 10px 10px; /* Add more padding at the top */
+  min-width: 300px;
+}
+
+
+.about-image img {
+  width: 100%;
+  height: 80%; /* Makes the image container match the height of the text */
+  object-fit: cover; /* Ensures image fills the container without distortion */
+  border-radius: 10px;
+  box-shadow: 0 6px 30px rgba(0, 0, 0, 0.15);
+  transition: transform 0.4s ease;
+}
+
+.about-image img:hover {
+  transform: scale(1.15);
+}
+
+.feature-section {
+  padding: 60px 20px;
+  background-color: #f5f5f5;
+  
+}
+
+.feature-section h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: #b8860b;
+  text-transform: uppercase;
+  font-family: 'Bangers', system-ui, sans-serif;
+}
+
+.feature-container {
+  display: flex;
+  gap: 40px;
+  max-width: 1400px;
+  margin: auto;
+  flex-wrap: wrap;
+}
+
+/* Image section takes 90% */
+.left-card {
+  flex: 9;
+  min-width: 300px;
+  max-width: 90%;
+  background-color: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.left-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Cards section takes 10% */
+.right-cards {
+  flex: 3;
+  display: flex;
+  flex-direction: column; /* Stack cards vertically */
+  gap: 15px;
+  width: 100%;
+  padding: 0 20px;
+}
+
+.small-card {
+  background-color: #ffffff;
+  color: #f40b6c;
+  padding: 12px;
+  text-align: center;
+  border-radius: 8px;
+  font-size: 18px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  width: 100%; /* Ensure card takes full width */
+}
+
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .feature-container {
+    flex-direction: column;
+  }
+
+  .left-card,
+  .right-cards {
+    flex: 1;
+    max-width: 100%;
+  }
+
+  .right-cards {
+    margin-top: 20px;
+    max-height: none;
+    overflow: visible;
+  }
+}
+
+h2 {
+  font-family: 'Bangers', system-ui, sans-serif;
+}
+
+
+  </style>
+</head>
+<body class="font-poppins bg-[#f0f1f6] text-[#333]">
+
+  <!-- Hero Section -->
+  <section class="relative h-screen flex items-center justify-center text-center text-white border-b-[5px] border-[#2c3e50]" 
+           style="background: url('https://lh3.googleusercontent.com/gps-cs-s/AC9h4npIjtKH5pLiuSm4wke4IWzP1GZV-E4RaApFhiBHF5uYx_vv6KePIatJTWNqwnlElBn0kdxeFIP271kHoy4N4kkxglaH1azfZ2pxpzoGorUJ-JPSaOdNC23xc_7fljf63_3LSH24=s1360-w1360-h1020-rw') no-repeat center center/cover;">
+    <div class="z-10 px-4">
+      <h2 class="font-playfair text-3xl sm:text-4xl md:text-5xl lg:text-[3.5rem] mb-5 drop-shadow-[2px_2px_10px_rgba(0,0,0,0.5)]">Welcome to Grand Lumbini Convention</h2>
+      <p class="text-base sm:text-lg md:text-xl lg:text-[1.2rem] drop-shadow-[2px_2px_10px_rgba(0,0,0,0.5)]">Experience the perfect blend of elegance and tradition. Make your events unforgettable with us!</p>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="grid grid-cols-1 md:grid-cols-2 gap-1 p-6 sm:p-10 max-w-[1200px] mx-auto -mt-[50px] bg-white shadow-[0_10px_25px_rgba(0,0,0,0.1)] rounded-[20px] h-auto max-h-none md:max-h-[700px]">
+    <div class="p-4 sm:p-10 min-w-[300px]">
+      <h3 class="font-playfair text-2xl sm:text-3xl md:text-[2.5rem] mb-5 text-[#2c3e50] uppercase tracking-[2px] font-semibold">About Us</h3>
+      <p class="text-base sm:text-lg md:text-[1.1rem] leading-[1.8] text-[#555] mb-4 text-justify">
+        <span class="text-[#cfb80e] font-bold">GRAND LUMBINI CONVENTION</span>, a unit of Seva Resorts and Estates Private Limited (established on 29th July 1998), stands as one of Bhubaneswar's most elegant and trusted venues for memorable celebrations. Nestled in a well-connected location, our venue offers a stunning fusion of tradition and modernity. Whether you're planning a wedding, engagement, birthday party, thread ceremony, or corporate event, our fully air-conditioned banquet hall and beautiful outdoor lawn provide the perfect setting.
+      </p>
+      <p class="text-base sm:text-lg md:text-[1.1rem] leading-[1.8] text-[#555] mb-4 text-justify">
+        Our experienced team ensures a seamless experience from start to finish, taking care of every detail to deliver a flawless event. Backed by warm hospitality and unmatched attention to detail, Grand Lumbini Mandap continues to set the standard for event venues in Odisha.
+      </p>
+    </div>
+
+    <div class="flex justify-center items-start p-4 pt-10 sm:p-10 min-w-[300px]">
+      <img 
+        src="https://lh3.googleusercontent.com/gps-cs-s/AC9h4npIjtKH5pLiuSm4wke4IWzP1GZV-E4RaApFhiBHF5uYx_vv6KePIatJTWNqwnlElBn0kdxeFIP271kHoy4N4kkxglaH1azfZ2pxpzoGorUJ-JPSaOdNC23xc_7fljf63_3LSH24=s1360-w1360-h1020-rw" 
+        alt="Grand Lumbini Mandap Building"
+        class="w-full h-[80%] object-cover rounded-[10px] shadow-[0_6px_30px_rgba(0,0,0,0.15)] transition-transform duration-400 hover:scale-[1.15]"
+      >
+    </div>
+  </section>
+
+  <!-- Ground Floor Features -->
+  <section class="py-10 px-5 sm:px-10 md:px-20 bg-[#9f1239] text-white text-center mt-10">
+    <h2 class="text-4xl sm:text-5xl md:text-6xl font-bangers text-[#b8860b] mb-10 uppercase">Ground Floor Facilities</h2>
+    
+    <div class="flex flex-col md:flex-row gap-6 max-w-[1400px] mx-auto">
+      <!-- Image Card -->
+      <div class="flex-[9] min-w-[300px] max-w-full md:max-w-[70%] bg-white rounded-[10px] overflow-hidden shadow-[0_4px_12px_rgba(0,0,0,0.1)]">
+        <img 
+          src="groundfloor.jpeg" 
+          alt="Ground Floor Image" 
+          class="w-full h-full object-cover block"
+        >
+      </div>
+      
+      <!-- Facilities Cards -->
+      <div class="flex-[3] flex flex-col gap-[15px] w-full p-0 md:p-5 mt-6 md:mt-0">
+        <div class="bg-[#9f1239] text-white p-3 text-center rounded-[8px] text-lg shadow-[0_2px_6px_rgba(0,0,0,0.05)] w-full">Air Conditioned Hall</div>
+        <div class="bg-[#9f1239] text-white p-3 text-center rounded-[8px] text-lg shadow-[0_2px_6px_rgba(0,0,0,0.05)] w-full">Hall Capacity (1 Halls)</div>
+        <div class="bg-[#9f1239] text-white p-3 text-center rounded-[8px] text-lg shadow-[0_2px_6px_rgba(0,0,0,0.05)] w-full">Attached Bride and Groom Room</div>
+        <div class="bg-[#9f1239] text-white p-3 text-center rounded-[8px] text-lg shadow-[0_2px_6px_rgba(0,0,0,0.05)] w-full">Air Conditioned Corridor</div>
+        <div class="bg-[#9f1239] text-white p-3 text-center rounded-[8px] text-lg shadow-[0_2px_6px_rgba(0,0,0,0.05)] w-full">Air Conditioned Dining Hall</div>
+        <div class="bg-[#9f1239] text-white p-3 text-center rounded-[8px] text-lg shadow-[0_2px_6px_rgba(0,0,0,0.05)] w-full">Parking Arrangement</div>
+        <div class="bg-[#9f1239] text-white p-3 text-center rounded-[8px] text-lg shadow-[0_2px_6px_rgba(0,0,0,0.05)] w-full">Make Shift Vibhav Mandap with Hawan Kunda</div>
+        <div class="bg-[#9f1239] text-white p-3 text-center rounded-[8px] text-lg shadow-[0_2px_6px_rgba(0,0,0,0.05)] w-full">Open Lawns & Podium for Announcement</div>
+        <div class="bg-[#9f1239] text-white p-3 text-center rounded-[8px] text-lg shadow-[0_2px_6px_rgba(0,0,0,0.05)] w-full">Open Space Inside Campus</div>
+        <div class="bg-[#9f1239] text-white p-3 text-center rounded-[8px] text-lg shadow-[0_2px_6px_rgba(0,0,0,0.05)] w-full">Furniture Rental & Alternative Chair for Bride&Groom</div>
+        <div class="bg-[#9f1239] text-white p-3 text-center rounded-[8px] text-lg shadow-[0_2px_6px_rgba(0,0,0,0.05)] w-full">Floral Decoration & Arrangement</div>
+        <div class="bg-[#9f1239] text-white p-3 text-center rounded-[8px] text-lg shadow-[0_2px_6px_rgba(0,0,0,0.05)] w-full">Lighting Design and Facility</div>
+        <div class="bg-[#9f1239] text-white p-3 text-center rounded-[8px] text-lg shadow-[0_2px_6px_rgba(0,0,0,0.05)] w-full">Catering Services</div>
+        <div class="bg-[#9f1239] text-white p-3 text-center rounded-[8px] text-lg shadow-[0_2px_6px_rgba(0,0,0,0.05)] w-full">Security Grid at Front Gate</div>
+        <div class="bg-[#9f1239] text-white p-3 text-center rounded-[8px] text-lg shadow-[0_2px_6px_rgba(0,0,0,0.05)] w-full">Unlimited Power Supply</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- First Floor Features -->
+  <section class="py-10 px-5 sm:px-10 md:px-20 bg-[#9f1239] text-white text-center">
+    <h2 class="text-4xl sm:text-5xl md:text-6xl font-bangers text-[#b8860b] mb-10 uppercase">First Floor Facilities</h2>
+    
+    <div class="flex flex-col md:flex-row gap-6 max-w-[1400px] mx-auto">
+      <!-- Image Card -->
+      <div class="flex-[9] min-w-[300px] max-w-full md:max-w-[70%] bg-white rounded-[10px] overflow-hidden shadow-[0_4px_12px_rgba(0,0,0,0.1)]">
+        <img 
+          src="mrg2.jpg" 
+          alt="First Floor Image" 
+          class="w-full h-full object-cover block"
+        >
+      </div>
+      
+      <!-- Facilities Cards -->
+      <div class="flex-[3] flex flex-col gap-[15px] w-full p-0 md:p-5 mt-6 md:mt-0">
+        <div class="bg-[#9f1239] text-white p-3 text-center rounded-[8px] text-lg shadow-[0_2px_6px_rgba(0,0,0,0.05)] w-full">Air Conditioned Hall</div>
+        <div class="bg-[#9f1239] text-white p-3 text-center rounded-[8px] text-lg shadow-[0_2px_6px_rgba(0,0,0,0.05)] w-full">Hall Capacity (1 Halls)</div>
+        <div class="bg-[#9f1239] text-white p-3 text-center rounded-[8px] text-lg shadow-[0_2px_6px_rgba(0,0,0,0.05)] w-full">Attached Bride and Groom Room</div>
+        <div class="bg-[#9f1239] text-white p-3 text-center rounded-[8px] text-lg shadow-[0_2px_6px_rgba(0,0,0,0.05)] w-full">Air Conditioned Corridor</div>
+        <div class="bg-[#9f1239] text-white p-3 text-center rounded-[8px] text-lg shadow-[0_2px_6px_rgba(0,0,0,0.05)] w-full">Air Conditioned Dining Hall</div>
+        <div class="bg-[#9f1239] text-white p-3 text-center rounded-[8px] text-lg shadow-[0_2px_6px_rgba(0,0,0,0.05)] w-full">Parking Arrangement</div>
+        <div class="bg-[#9f1239] text-white p-3 text-center rounded-[8px] text-lg shadow-[0_2px_6px_rgba(0,0,0,0.05)] w-full">Make Shift Vibhav Mandap with Hawan Kunda</div>
+        <div class="bg-[#9f1239] text-white p-3 text-center rounded-[8px] text-lg shadow-[0_2px_6px_rgba(0,0,0,0.05)] w-full">Open Lawns & Podium for Announcement</div>
+        <div class="bg-[#9f1239] text-white p-3 text-center rounded-[8px] text-lg shadow-[0_2px_6px_rgba(0,0,0,0.05)] w-full">Open Space Inside Campus</div>
+        <div class="bg-[#9f1239] text-white p-3 text-center rounded-[8px] text-lg shadow-[0_2px_6px_rgba(0,0,0,0.05)] w-full">Furniture Rental & Alternative Chair for Bride&Groom</div>
+        <div class="bg-[#9f1239] text-white p-3 text-center rounded-[8px] text-lg shadow-[0_2px_6px_rgba(0,0,0,0.05)] w-full">Floral Decoration & Arrangement</div>
+        <div class="bg-[#9f1239] text-white p-3 text-center rounded-[8px] text-lg shadow-[0_2px_6px_rgba(0,0,0,0.05)] w-full">Lighting Design and Facility</div>
+        <div class="bg-[#9f1239] text-white p-3 text-center rounded-[8px] text-lg shadow-[0_2px_6px_rgba(0,0,0,0.05)] w-full">Catering Services</div>
+        <div class="bg-[#9f1239] text-white p-3 text-center rounded-[8px] text-lg shadow-[0_2px_6px_rgba(0,0,0,0.05)] w-full">Security Grid at Front Gate</div>
+        <div class="bg-[#9f1239] text-white p-3 text-center rounded-[8px] text-lg shadow-[0_2px_6px_rgba(0,0,0,0.05)] w-full">Unlimited Power Supply</div>
+      </div>
+    </div>
+  </section>
+
+</body>
+</html>
