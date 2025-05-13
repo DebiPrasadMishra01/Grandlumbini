@@ -343,9 +343,9 @@
 
         
   
-  @media (max-width: 768px) {
+ @media (max-width: 768px) {
   nav {
-    row-gap: 0.25rem; /* reduce vertical spacing */
+    row-gap: 0.25rem;
     column-gap: 0.5rem;
   }
 
@@ -357,6 +357,7 @@
     position: relative;
     overflow: hidden;
     text-decoration: none;
+    color: #000;
   }
 
   nav a::after {
@@ -371,8 +372,7 @@
   }
 
   nav a:hover::after,
-  nav a:focus::after,
-  nav a:active::after {
+  nav a:focus-visible::after {
     width: 100%;
   }
 
@@ -386,6 +386,7 @@
     margin-left: 0 !important;
   }
 }
+
 
         @keyframes kenburns {
             0% {
@@ -1365,6 +1366,15 @@
             }
         }
     </script>
+
+    <script>
+  document.querySelectorAll("nav a").forEach(link => {
+    link.addEventListener("touchstart", () => {
+      link.focus();
+    });
+  });
+</script>
+
 
 
 </body>
