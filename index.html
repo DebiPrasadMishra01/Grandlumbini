@@ -352,13 +352,12 @@
   nav a {
     display: inline-flex;
     align-items: center;
-    padding: 0.5rem 0.8rem; /* Increased padding for mobile */
-    font-size: 1rem; /* Adjust font size for readability */
+    padding: 0.3rem 0.4rem;
+    font-size: 0.9rem;
     position: relative;
     overflow: hidden;
     text-decoration: none;
     color: #000;
-    white-space: nowrap; /* Prevent text from breaking */
   }
 
   nav a::after {
@@ -366,10 +365,10 @@
     position: absolute;
     bottom: 0;
     left: 0;
-    height: 3px; /* Increased line thickness */
+    height: 2px;
     width: 0%;
     background-color: red;
-    transition: width 0.4s ease-in-out; /* Slightly slower transition */
+    transition: width 0.3s ease;
   }
 
   nav a:hover::after,
@@ -378,15 +377,16 @@
   }
 
   nav a i {
-    font-size: 1rem; /* Larger icon size */
-    margin-right: 0.5rem; /* Adjust margin */
+    font-size: 0.35rem;
+    margin-right: 0.25rem;
   }
 
   nav a span {
-    font-size: 1rem; /* Adjusted font size for consistency */
+    font-size: 0.9rem;
     margin-left: 0 !important;
   }
 }
+
 
         @keyframes kenburns {
             0% {
@@ -479,31 +479,30 @@
             <div class="w-6 h-0.5 bg-dark transition-all duration-300"></div>
         </button>
     </div>
-   <!-- Mobile Menu -->
-<div id="mobile-menu" class="hidden bg-light shadow-lg absolute top-full left-0 right-0 z-20 transition-all duration-300 transform -translate-y-full mobile-menu-container">
-    <div class="container mx-auto px-6 py-6 space-y-6">
-        <a href="index.html" class="menu-link block text-dark hover:text-primary transition-all duration-300 py-3 border-b border-gray-100 text-lg">Home</a>
-        <a href="about.html" class="menu-link block text-dark hover:text-primary transition-all duration-300 py-3 border-b border-gray-100 text-lg">About</a>
-        <a href="#services" class="menu-link block text-dark hover:text-primary transition-all duration-300 py-3 border-b border-gray-100 text-lg">Services</a>
-        <a href="#gallery" class="menu-link block text-dark hover:text-primary transition-all duration-300 py-3 border-b border-gray-100 text-lg">Gallery</a>
-        <a href="#testimonials" class="menu-link block text-dark hover:text-primary transition-all duration-300 py-3 border-b border-gray-100 text-lg">Testimonials</a>
-        <a href="#contact" class="menu-link block text-dark hover:text-primary transition-all duration-300 py-3 text-lg">Contact</a>
-        
-        <!-- Mobile Social Icons -->
-        <div class="pt-4 flex justify-center space-x-6">
-            <a href="#" class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center text-primary hover:bg-primary hover:text-light transition-all duration-300">
-                <i class="fab fa-facebook-f"></i>
-            </a>
-            <a href="#" class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center text-primary hover:bg-primary hover:text-light transition-all duration-300">
-                <i class="fab fa-instagram"></i>
-            </a>
-            <a href="#" class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center text-primary hover:bg-primary hover:text-light transition-all duration-300">
-                <i class="fab fa-pinterest"></i>
-            </a>
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden bg-light shadow-lg absolute top-full left-0 right-0 z-20 transition-all duration-300 transform -translate-y-full mobile-menu-container">
+        <div class="container mx-auto px-6 py-6 space-y-6">
+            <a href="index.html" class="block text-dark hover:text-primary transition-all duration-300 py-3 border-b border-gray-100 text-lg">Home</a>
+            <a href="about.html" class="block text-dark hover:text-primary transition-all duration-300 py-3 border-b border-gray-100 text-lg">About</a>
+            <a href="#services" class="block text-dark hover:text-primary transition-all duration-300 py-3 border-b border-gray-100 text-lg">Services</a>
+            <a href="#gallery" class="block text-dark hover:text-primary transition-all duration-300 py-3 border-b border-gray-100 text-lg">Gallery</a>
+            <a href="#testimonials" class="block text-dark hover:text-primary transition-all duration-300 py-3 border-b border-gray-100 text-lg">Testimonials</a>
+            <a href="#contact" class="block text-dark hover:text-primary transition-all duration-300 py-3 text-lg">Contact</a>
+            
+            <!-- Mobile Social Icons -->
+            <div class="pt-4 flex justify-center space-x-6">
+                <a href="#" class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center text-primary hover:bg-primary hover:text-light transition-all duration-300">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="#" class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center text-primary hover:bg-primary hover:text-light transition-all duration-300">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="#" class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center text-primary hover:bg-primary hover:text-light transition-all duration-300">
+                    <i class="fab fa-pinterest"></i>
+                </a>
+            </div>
         </div>
     </div>
-</div>
-
 </nav>
     <!-- Hero Section -->
     <section id="home" class="relative min-h-screen flex items-center justify-center bg-white pt-16 md:pt-20 overflow-hidden">
@@ -1368,24 +1367,14 @@
         }
     </script>
 
-   
-<script>
-  document.querySelectorAll('.menu-link').forEach(link => {
-    link.addEventListener('click', function (e) {
-      e.preventDefault(); // Prevent immediate navigation
-
-      const href = this.getAttribute('href'); // Get the link destination
-
-      // Add click effect
-      this.classList.add('clicked-effect');
-
-      // Wait for 300ms, then navigate
-      setTimeout(() => {
-        window.location.href = href;
-      }, 300); // 300ms delay
+    <script>
+  document.querySelectorAll("nav a").forEach(link => {
+    link.addEventListener("touchstart", () => {
+      link.focus();
     });
   });
 </script>
+
 
 
 </body>
