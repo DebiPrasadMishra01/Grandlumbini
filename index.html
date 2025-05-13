@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -349,40 +348,33 @@
     row-gap: 0.25rem; /* reduce vertical spacing */
     column-gap: 0.5rem;
   }
-}
 
-nav a {
-  display: inline-flex;
-  align-items: center;
-  padding: 0.3rem 0.4rem;
-  font-size: 0.9rem;
-  text-decoration: none;
-  position: relative;
-  overflow: hidden;
-  color: #000; /* text color */
-}
+  nav a {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.3rem 0.4rem;
+    font-size: 0.9rem;
+    position: relative;
+    overflow: hidden;
+    text-decoration: none;
+  }
 
-nav a::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  height: 2px;
-  width: 0%;
-  background-color: red; /* underline color */
-  transition: width 0.4s ease;
-}
+  nav a::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    width: 0%;
+    background-color: red;
+    transition: width 0.3s ease;
+  }
 
-nav a:hover::after,
-nav a:focus::after,
-nav a:active::after {
-  width: 100%;
-}
-
-nav a:focus {
-  outline: none;
-}
-
+  nav a:hover::after,
+  nav a:focus::after,
+  nav a:active::after {
+    width: 100%;
+  }
 
   nav a i {
     font-size: 0.35rem;
@@ -393,8 +385,7 @@ nav a:focus {
     font-size: 0.9rem;
     margin-left: 0 !important;
   }
- 
-
+}
 
         @keyframes kenburns {
             0% {
