@@ -342,6 +342,58 @@
         }
 
         
+  
+  @media (max-width: 768px) {
+  nav {
+    row-gap: 0.25rem; /* reduce vertical spacing */
+    column-gap: 0.5rem;
+  }
+}
+
+nav a {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.3rem 0.4rem;
+  font-size: 0.9rem;
+  text-decoration: none;
+  position: relative;
+  overflow: hidden;
+  color: #000; /* text color */
+}
+
+nav a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  width: 0%;
+  background-color: red; /* underline color */
+  transition: width 0.4s ease;
+}
+
+nav a:hover::after,
+nav a:focus::after,
+nav a:active::after {
+  width: 100%;
+}
+
+nav a:focus {
+  outline: none;
+}
+
+
+  nav a i {
+    font-size: 0.35rem;
+    margin-right: 0.25rem;
+  }
+
+  nav a span {
+    font-size: 0.9rem;
+    margin-left: 0 !important;
+  }
+ 
+
 
         @keyframes kenburns {
             0% {
@@ -543,7 +595,7 @@
         <!-- Outer Carousel & Buttons Container -->
         <div class="relative flex items-center justify-center">
             <!-- Left Button Outside -->
-            <button onclick="scrollCarousel('left')" class="z-10 mr-2 -ml-4 sm:-ml-10 bg-rose-800 text-white p-2 sm:p-3 rounded-full shadow-md hover:bg-rose-700 transition">
+            <button onclick="scrollCarousel('left')" class="z-10 mr-2 -ml-4 sm:-ml-10 bg-rose-600 text-white p-2 sm:p-3 rounded-full shadow-md hover:bg-rose-700 transition">
                 <svg class="w-4 h-4 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
                 </svg>
@@ -625,7 +677,7 @@
       
             
             <!-- Right Button Outside -->
-            <button onclick="scrollCarousel('right')" class="z-10 ml-2 -mr-4 sm:-mr-10 bg-rose-800 text-white p-2 sm:p-3 rounded-full shadow-md hover:bg-rose-700 transition">
+            <button onclick="scrollCarousel('right')" class="z-10 ml-2 -mr-4 sm:-mr-10 bg-rose-600 text-white p-2 sm:p-3 rounded-full shadow-md hover:bg-rose-700 transition">
                 <svg class="w-4 h-4 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
                 </svg>
@@ -701,7 +753,7 @@
 
   <a href="corporate.html" class="gallery-filter-btn whitespace-nowrap px-4 py-2 rounded-full bg-primary text-white hover:bg-primary/80 transition-all duration-300 text-sm sm:text-base">Corporate</a>
 
-  <a href="aniversary.html" class="gallery-filter-btn whitespace-nowrap px-4 py-2 rounded-full bg-primary text-white hover:bg-primary/80 transition-all duration-300 text-sm sm:text-base">Aniversary</a>
+  <a href="aniversary.html" class="gallery-filter-btn whitespace-nowrap px-4 py-2 rounded-full bg-primary text-white hover:bg-primary/80 transition-all duration-300 text-sm sm:text-base">Anniversary</a>
 
   <a href="thread.html" class="gallery-filter-btn whitespace-nowrap px-4 py-2 rounded-full bg-primary text-white hover:bg-primary/80 transition-all duration-300 text-sm sm:text-base">Thread</a>
 
@@ -961,7 +1013,7 @@
                                 </div>
                                 <div>
                                     <h4 class="font-semibold text-dark mb-1 text-sm sm:text-base">Our Location</h4>
-                                    <p class="text-gray-700 text-xs sm:text-sm">Plot No 321, KENDRIYA VIDYALAY.. 4, GA-P1, Neeladri Vihar, Chandrasekharpur, Bhubaneswar, Odisha 751021</p>
+                                    <p class="text-gray-700 text-xs sm:text-sm">Plot No 321, Kendriya Vidyalaya.. 4, GA-P1, Neeladri Vihar, Chandrasekharpur, Bhubaneswar, Odisha 751021</p>
                                 </div>
                             </div>
                             <div class="flex items-start">
@@ -1058,33 +1110,33 @@
         <a href="https://maps.app.goo.gl/N8RY8yGrv2zVi6ET8" target="_blank" class="flex items-center space-x-2">
       <i class="fas fa-map-marker-alt text-yellow-400 text-[19.05px]"></i>
       <span class="text-white text-[19.05px]">
-        Plot No 321, KENDRIYA VIDYALAY.. 4, GA-P1, Neeladri Vihar, Chandrasekharpur, Bhubaneswar, Odisha 751021
+        Plot No 321, Kendrya Vidyalaya.. 4, GA-P1, Neeladri Vihar, Chandrasekharpur, Bhubaneswar, Odisha 751021
       </span>
     </div>
   </div>
   
       
   
-      <!-- Navigation Links -->
-      <nav class="flex justify-center flex-wrap gap-6 text-yellow-400 mb-6">
-        <a href="about.html" class="flex items-center gap-1 hover:text-yellow-300">
-          <i class="fa-solid fa-circle text-[0.4rem] text-white-700"></i>
-          <span class="text-[19.05px] ml-2 text-white">About Us</span>
-        </a>
-        <a href="#" class="flex items-center gap-1 hover:text-yellow-300">
-          <i class="fa-solid fa-circle text-[0.4rem] text-white-700"></i>
-          <span class="text-[19.05px] ml-2 text-white">Our Services</span>
-        </a>
-        <a href="#" class="flex items-center gap-1 hover:text-yellow-300">
-          <i class="fa-solid fa-circle text-[0.4rem] text-white-700"></i>
-          <span class="text-[19.05px] ml-2 text-white">Our Gallery</span>
-        </a>
-        <a href="#" class="flex items-center gap-1 hover:text-yellow-300">
-          <i class="fa-solid fa-circle text-[0.4rem] text-white-700"></i>
-          <span class="text-[19.05px] ml-2 text-white">Contact Us</span>
-        </a>
-      </nav>
-  
+     <!-- Navigation Links -->
+<nav class="flex justify-center flex-wrap gap-0 sm:gap-6 text-yellow-400 mb-0 sm:mb-6">
+  <a href="about.html" class="flex items-center gap-1 hover:text-yellow-300">
+    <i class="fa-solid fa-circle text-[0.4rem] text-white-700"></i>
+    <span class="text-[19.05px] ml-2 text-white">About Us</span>
+  </a>
+  <a href="#" class="flex items-center gap-1 hover:text-yellow-300">
+    <i class="fa-solid fa-circle text-[0.4rem] text-white-700"></i>
+    <span class="text-[19.05px] ml-2 text-white">Our Services</span>
+  </a>
+  <a href="#" class="flex items-center gap-1 hover:text-yellow-300">
+    <i class="fa-solid fa-circle text-[0.4rem] text-white-700"></i>
+    <span class="text-[19.05px] ml-2 text-white">Our Gallery</span>
+  </a>
+  <a href="#" class="flex items-center gap-1 hover:text-yellow-300">
+    <i class="fa-solid fa-circle text-[0.4rem] text-white-700"></i>
+    <span class="text-[19.05px] ml-2 text-white">Contact Us</span>
+  </a>
+</nav>
+
       <!-- Social Media Icons -->
       <div class="flex justify-center space-x-6 mt-6">
         <a href="#" class=" rounded-full w-9 h-9 flex items-center justify-center text-white text-xl hover:scale-110 transition-transform">
