@@ -342,8 +342,22 @@
         }
 
         
-  
- @media (max-width: 768px) {
+ /* General Link Styles */
+nav a {
+  transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transitions */
+}
+
+nav a:hover {
+  background-color: #e53e3e; /* Red background on hover */
+  color: white; /* Text color on hover */
+}
+
+nav a:focus {
+  background-color: #e53e3e; /* Ensure focus has same red background */
+  color: white; /* Text color on focus */
+}
+
+@media (max-width: 768px) {
   nav {
     row-gap: 0.25rem;
     column-gap: 0.5rem;
@@ -1399,10 +1413,14 @@
 
     <script>
   document.querySelectorAll("nav a").forEach(link => {
-    link.addEventListener("touchstart", () => {
-      link.focus();
-    });
+  link.addEventListener("touchstart", () => {
+    link.focus();
+    setTimeout(() => {
+      link.blur();  // Remove focus after a short time to allow hover styles to trigger
+    }, 200);  // Adjust time as necessary
   });
+});
+
 </script>
 
 
