@@ -358,8 +358,10 @@
     overflow: hidden;
     text-decoration: none;
     color: #000;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth background and text color */
   }
 
+  /* Underline effect */
   nav a::after {
     content: "";
     position: absolute;
@@ -368,10 +370,20 @@
     height: 2px;
     width: 0%;
     background-color: red;
-    transition: width 0.3s ease;
+    transition: width 0.3s ease; /* Only animate the width */
   }
 
-  nav a:hover::after,
+  /* Hover state: apply the background color and animate the underline */
+  nav a:hover {
+    background-color: #e53e3e; /* Solid red */
+    color: white; /* White text color when hovered */
+  }
+
+  nav a:hover::after {
+    width: 100%; /* Full width for the underline when hovered */
+  }
+
+  /* Focus state */
   nav a:focus-visible::after {
     width: 100%;
   }
@@ -479,30 +491,34 @@
             <div class="w-6 h-0.5 bg-dark transition-all duration-300"></div>
         </button>
     </div>
-    <!-- Mobile Menu -->
-    <div id="mobile-menu" class="hidden bg-light shadow-lg absolute top-full left-0 right-0 z-20 transition-all duration-300 transform -translate-y-full mobile-menu-container">
-        <div class="container mx-auto px-6 py-6 space-y-6">
-            <a href="index.html" class="block text-dark hover:text-primary transition-all duration-300 py-3 border-b border-gray-100 text-lg">Home</a>
-            <a href="about.html" class="block text-dark hover:text-primary transition-all duration-300 py-3 border-b border-gray-100 text-lg">About</a>
-            <a href="#services" class="block text-dark hover:text-primary transition-all duration-300 py-3 border-b border-gray-100 text-lg">Services</a>
-            <a href="#gallery" class="block text-dark hover:text-primary transition-all duration-300 py-3 border-b border-gray-100 text-lg">Gallery</a>
-            <a href="#testimonials" class="block text-dark hover:text-primary transition-all duration-300 py-3 border-b border-gray-100 text-lg">Testimonials</a>
-            <a href="#contact" class="block text-dark hover:text-primary transition-all duration-300 py-3 text-lg">Contact</a>
-            
-            <!-- Mobile Social Icons -->
-            <div class="pt-4 flex justify-center space-x-6">
-                <a href="#" class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center text-primary hover:bg-primary hover:text-light transition-all duration-300">
-                    <i class="fab fa-facebook-f"></i>
-                </a>
-                <a href="#" class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center text-primary hover:bg-primary hover:text-light transition-all duration-300">
-                    <i class="fab fa-instagram"></i>
-                </a>
-                <a href="#" class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center text-primary hover:bg-primary hover:text-light transition-all duration-300">
-                    <i class="fab fa-pinterest"></i>
-                </a>
-            </div>
-        </div>
+    <div id="mobile-menu" class="bg-white shadow-lg absolute top-full left-0 right-0 z-20 transition-all duration-300 transform mobile-menu-container md:hidden">
+  <div class="container mx-auto px-6 py-6 space-y-6">
+    
+    <!-- Menu Links -->
+    <a href="index.html" class="block text-gray-800 hover:text-white hover:bg-red-700 active:bg-red-800 active:text-white transition duration-100 ease-in py-3 px-4 text-lg border-b border-gray-100">Home</a>
+    <a href="about.html" class="block text-gray-800 hover:text-white hover:bg-red-700 active:bg-red-800 active:text-white transition duration-100 ease-in py-3 px-4 text-lg border-b border-gray-100">About</a>
+    <a href="#services" class="block text-gray-800 hover:text-white hover:bg-red-700 active:bg-red-800 active:text-white transition duration-100 ease-in py-3 px-4 text-lg border-b border-gray-100">Services</a>
+    <a href="#gallery" class="block text-gray-800 hover:text-white hover:bg-red-700 active:bg-red-800 active:text-white transition duration-100 ease-in py-3 px-4 text-lg border-b border-gray-100">Gallery</a>
+    <a href="#testimonials" class="block text-gray-800 hover:text-white hover:bg-red-700 active:bg-red-800 active:text-white transition duration-100 ease-in py-3 px-4 text-lg border-b border-gray-100">Testimonials</a>
+    <a href="#contact" class="block text-gray-800 hover:text-white hover:bg-red-700 active:bg-red-800 active:text-white transition duration-100 ease-in py-3 px-4 text-lg">Contact</a>
+
+    <!-- Mobile Social Icons -->
+    <div class="pt-4 flex justify-center space-x-6">
+      <a href="#" class="w-12 h-12 bg-red-100 rounded-full flex items-center justify-center text-red-600 hover:bg-red-700 hover:text-white active:bg-red-800 active:text-white transition-colors duration-300">
+        <i class="fab fa-facebook-f"></i>
+      </a>
+      <a href="#" class="w-12 h-12 bg-red-100 rounded-full flex items-center justify-center text-red-600 hover:bg-red-700 hover:text-white active:bg-red-800 active:text-white transition-colors duration-300">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a href="#" class="w-12 h-12 bg-red-100 rounded-full flex items-center justify-center text-red-600 hover:bg-red-700 hover:text-white active:bg-red-800 active:text-white transition-colors duration-300">
+        <i class="fab fa-pinterest"></i>
+      </a>
     </div>
+
+  </div>
+</div>
+
+
 </nav>
     <!-- Hero Section -->
     <section id="home" class="relative min-h-screen flex items-center justify-center bg-white pt-16 md:pt-20 overflow-hidden">
@@ -695,7 +711,16 @@
 
 
      <!-- Additional Services -->
-     <div class="mt-12 sm:mt-16 px-2 grid grid-cols-2 md:grid-cols-5 gap-4 sm:gap-2" data-aos="fade-up" data-aos-delay="400">
+      <div class="text-center mt-12 mb-10 sm:mb-16" data-aos="fade-up">
+    <h2 class="text-3xl sm:text-4xl md:text-5xl text-dark font-cinzel relative inline-block">
+        Our Special Services
+        <span class="absolute -bottom-3 left-1/2 transform -translate-x-1/2 w-24 h-1 bg-primary"></span>
+    </h2>
+</div>
+
+
+      </div>
+     <div class="mt-12 sm:mt-16 px-2 grid grid-cols-2 md:grid-cols-6 gap-4 sm:gap-2" data-aos="fade-up" data-aos-delay="400">
         <div class="bg-[#e3a917] p-4 sm:p-6 rounded-lg shadow-lg text-center hover-scale">
             <i class="fas fa-spa text-primary text-xl text-white sm:text-4xl mb-2 sm:mb-3"></i>
             <h4 class="text-base sm:text-2xl font-semibold text-white">Floral Arrangements</h4>
@@ -713,6 +738,11 @@
         <div class="bg-[#e3a917] p-4 sm:p-6 rounded-lg shadow-lg text-center hover-scale">
             <i class="fas fa-chair text-primary text-white text-xl sm:text-4xl mb-2 sm:mb-3"></i>
             <h4 class="text-base sm:text-2xl font-semibold text-white">Furniture <br>Rental</h4>
+        </div>
+
+        <div class="bg-[#e3a917] p-4 sm:p-6 rounded-lg shadow-lg text-center hover-scale">
+            <i class="fas fa-music text-primary text-white text-xl sm:text-4xl mb-2 sm:mb-3"></i>
+            <h4 class="text-base sm:text-2xl font-semibold text-white">DJ<br>Music</h4>
         </div>
         <div class="bg-[#e3a917] p-4 sm:p-6 rounded-lg shadow-lg text-center hover-scale">
             <i class="fas fa-camera text-primary text-white text-xl sm:text-4xl mb-2 sm:mb-3"></i>
