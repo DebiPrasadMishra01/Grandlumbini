@@ -18,6 +18,16 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+<!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Swiper CSS CDN -->
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+  />
+
        
     <script>
         tailwind.config = {
@@ -271,6 +281,9 @@
         .lightbox-next {
             right: 20px;
         }
+
+ 
+
         
         @media (max-width: 768px) {
             .lightbox-prev, .lightbox-next {
@@ -415,6 +428,7 @@
             object-fit: cover;
         }
 
+     
         .swiper-slide .kenburns-img {
     width: 100%;
     height: 100%;
@@ -445,6 +459,16 @@
   }
     </style>
 
+ <style>
+    /* Force smaller rounded images on mobile */
+    @media (max-width: 767px) {
+      #testimonials .swiper-slide img {
+        width: 40px !important;
+        height: 40px !important;
+        border-radius: 9999px !important;
+      }
+    }
+  </style>
   
 </head>
 <body class="bg-light">
@@ -525,7 +549,22 @@
                 </div>
             </div>
         </div>
-          
+<script>
+  var swiper = new Swiper(".mySwiper", {
+    effect: 'fade',            // Use fade effect instead of slide
+    loop: true,
+    autoplay: {
+      delay: 4000,
+      disableOnInteraction: false,
+    },
+    speed: 5000,               // Fade transition speed (2 seconds)
+    fadeEffect: {
+      crossFade: true,         // Smooth fade between slides
+    },
+  });
+</script>
+
+         
         <!-- Dark Overlay -->
         <div class="absolute inset-0 bg-black/60 z-0"></div>
     
@@ -912,59 +951,135 @@
         </div>
     </section>
 
-    <!-- Testimonials Section -->
-    <section id="testimonials" class="py-20 px-4 bg-gray-50">
-        <div class="max-w-7xl mx-auto text-center mb-12">
-          <h2 class="text-4xl md:text-5xl font-cinzel text-rose-800 mb-4">What Our Clients Say</h2>
-          <p class="text-lg text-gray-600">Real experiences from happy clients who trusted our royal services.</p>
-        </div>
-      
-        <div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-8">
-          <!-- Review Card -->
-          <div class="bg-white rounded-xl shadow-lg p-6 text-left">
-            <div class="flex items-center mb-4">
-              <img src="https://images.unsplash.com/photo-1668238226906-03e306554f13?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="w-12 h-12 rounded-full mr-4" alt="Client Photo">
-              <div>
-                <h3 class="text-xl font-semibold text-rose-800">Kyra Panigrahi</h3>
-                <div class="flex text-yellow-500">
-                  ★★★★★
-                </div>
-              </div>
-            </div>
-            <p class="text-gray-600">Absolutely magical! The wedding decor and arrangements were beyond our expectations. Highly recommend!</p>
-          </div>
-      
-          <!-- Review Card -->
-          <div class="bg-white rounded-xl shadow-lg p-6 text-left">
-            <div class="flex items-center mb-4">
-              <img src="https://images.unsplash.com/photo-1594903833720-f9a68102aae1?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="w-12 h-12 rounded-full mr-4" alt="Client Photo">
-              <div>
-                <h3 class="text-xl font-semibold text-rose-800">Deb Mishra</h3>
-                <div class="flex text-yellow-500">
-                ★★★★★
-                </div>
-              </div>
-            </div>
-            <p class="text-gray-600">Professional, punctual, and creative! Our anniversary party was stunning thanks to the team.</p>
-          </div>
-      
-          <!-- Review Card -->
-          <div class="bg-white rounded-xl shadow-lg p-6 text-left">
-            <div class="flex items-center mb-4">
-              <img src="https://images.unsplash.com/photo-1661875155834-d1871e603ab8?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="w-12 h-12 rounded-full mr-4" alt="Client Photo">
-              <div>
-                <h3 class="text-xl font-semibold text-rose-800">Lisa Pradhan</h3>
-                <div class="flex text-yellow-500">
-                  ★★★★★
-                </div>
-              </div>
-            </div>
-            <p class="text-gray-600">They handled everything beautifully—from entry to catering. It was a stress-free experience!</p>
-          </div>
-        </div>
-      </section>
-              
+<!-- Testimonials Section -->
+<section id="testimonials" class="py-20 px-4 bg-gray-50">
+  <div class="max-w-7xl mx-auto text-center mb-12 px-2">
+    <h2 class="text-4xl md:text-5xl font-cinzel text-rose-800 mb-4">What Our Clients Say</h2>
+    <p class="text-lg text-gray-600">Real experiences from happy clients who trusted our royal services.</p>
+  </div>
 
+  <!-- Swiper Slider -->
+  <div class="swiper testimonialsSwiper w-full max-w-6xl mx-auto">
+    <div class="swiper-wrapper">
+
+      <!-- Slide 1 -->
+      <div class="swiper-slide bg-white rounded-xl shadow-lg p-6 text-left max-w-sm mx-auto">
+        <div class="flex items-center mb-4">
+          <img src="pooja.jpg" alt="Pooja" class="w-12 h-12 md:w-16 md:h-16 rounded-full object-cover object-center mr-4" />
+          <div>
+            <h3 class="text-lg md:text-xl font-semibold text-rose-800">Pooja Priyanshi</h3>
+            <div class="flex text-yellow-500 text-sm md:text-base">
+              <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+            </div>
+          </div>
+        </div>
+        <p class="text-gray-600 text-sm md:text-base">
+          “The experience was nothing short of magical! Every detail of the wedding decor was flawless and truly exited.”
+        </p>
+      </div>
+
+      <!-- Slide 2 -->
+      <div class="swiper-slide bg-white rounded-xl shadow-lg p-6 text-left max-w-sm mx-auto">
+        <div class="flex items-center mb-4">
+          <img src="yogesmita1.jpg" alt="Yougesmita" class="w-12 h-12 md:w-16 md:h-16 rounded-full object-cover object-center mr-4" />
+          <div>
+            <h3 class="text-lg md:text-xl font-semibold text-rose-800">Yougesmita Panigrahi</h3>
+            <div class="flex text-yellow-500 text-sm md:text-base">
+              <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+            </div>
+          </div>
+        </div>
+        <p class="text-gray-600 text-sm md:text-base">
+          “A dream come true! The entire event was beautifully orchestrated — elegant, vibrant, and unforgettable.”
+        </p>
+      </div>
+
+      <!-- Slide 3 -->
+      <div class="swiper-slide bg-white rounded-xl shadow-lg p-6 text-left max-w-sm mx-auto">
+        <div class="flex items-center mb-4">
+          <img src="banaja.jpg" alt="Banaja" class="w-12 h-12 md:w-16 md:h-16 rounded-full object-cover object-center mr-4" />
+          <div>
+            <h3 class="text-lg md:text-xl font-semibold text-rose-800">Banaja Pradhan</h3>
+            <div class="flex text-yellow-500 text-sm md:text-base">
+              <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+            </div>
+          </div>
+        </div>
+        <p class="text-gray-600 text-sm md:text-base">
+          “Exceptional service and breathtaking decor! The team turned our vision into reality. Highly recommended!”
+        </p>
+      </div>
+
+      <!-- Slide 4 -->
+      <div class="swiper-slide bg-white rounded-xl shadow-lg p-6 text-left max-w-sm mx-auto">
+        <div class="flex items-center mb-4">
+          <img src="lisa1.jpg" alt="Lisa" class="w-12 h-12 md:w-16 md:h-16 rounded-full object-cover object-center mr-4" />
+          <div>
+            <h3 class="text-lg md:text-xl font-semibold text-rose-800">Lisa Biswal</h3>
+            <div class="flex text-yellow-500 text-sm md:text-base">
+              <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+            </div>
+          </div>
+        </div>
+        <p class="text-gray-600 text-sm md:text-base">
+          “Everything was handled with perfection. The decor was stunning and left our guests in awe!”
+        </p>
+      </div>
+
+      <!-- Slide 5 -->
+      <div class="swiper-slide bg-white rounded-xl shadow-lg p-6 text-left max-w-sm mx-auto">
+        <div class="flex items-center mb-4">
+          <img src="priyanka.jpg" alt="Priyanka" class="w-12 h-12 md:w-16 md:h-16 rounded-full object-cover object-center mr-4" />
+          <div>
+            <h3 class="text-lg md:text-xl font-semibold text-rose-800">Priyanka Parida</h3>
+            <div class="flex text-yellow-500 text-sm md:text-base">
+              <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+            </div>
+          </div>
+        </div>
+        <p class="text-gray-600 text-sm md:text-base">
+          “The team made our special day unforgettable. Beautiful service and highly recommended!”
+        </p>
+      </div>
+
+    </div>
+
+    <!-- Pagination -->
+    <div class="swiper-pagination mt-8"></div>
+  </div>
+</section>
+
+<script>
+  var testimonialSwiper = new Swiper(".testimonialsSwiper", {
+    slidesPerView: 3,
+    slidesPerGroup: 3,
+    spaceBetween: 30,
+    loop: true,
+    autoplay: {
+      delay: 5000,
+      disableOnInteraction: false,
+    },
+    speed: 1000, // 👈 Add this line for smooth transitions (1000ms = 1s)
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    breakpoints: {
+      1024: {
+        slidesPerView: 3,
+        slidesPerGroup: 3,
+      },
+      768: {
+        slidesPerView: 2,
+        slidesPerGroup: 2,
+      },
+      0: {
+        slidesPerView: 1,
+        slidesPerGroup: 1,
+      },
+    },
+  });
+</script>
     <!-- Contact Section -->
     <section id="contact" class="py-16 sm:py-20 bg-light relative">
         <div class="container mx-auto px-4 sm:px-6">
@@ -1075,13 +1190,23 @@
     </section>
 
    <!-- Map Section -->
-  <section id="location" class="py-4 px-4 bg-neutral-100 relative">
-    <div class="absolute top-0 left-0 w-full h-20 bg-gradient-to-b from-white to-transparent"></div>
-    <div class="absolute -top-10 left-20 w-40 h-40 bg-amber-400/10 rounded-full blur-3xl"></div>
-    <div class="w-full h-[450px] rounded-2xl overflow-hidden shadow-2xl border-4 border-white relative">
-      <div class="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/50 z-10 pointer-events-none"></div>
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3741.461542382832!2d85.8109348!3d20.3225432!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a1909ac76f4bcbb%3A0xbd1e58156df266b2!2sGrand%20Lumbini%20Convention!5e0!3m2!1sen!2sin!4v1746688616044!5m2!1sen!2sin" width="1500" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-      </section>
+<section id="location" class="py-4 px-4 bg-neutral-100 relative">
+  <!-- Decorative background blur circles -->
+  <div class="absolute top-0 left-0 w-full h-20 bg-gradient-to-b from-white to-transparent z-0"></div>
+  <div class="absolute -top-10 left-20 w-40 h-40 bg-amber-400/10 rounded-full blur-3xl z-0"></div>
+
+  <!-- Map Container -->
+  <div class="relative w-full h-80 sm:h-[450px] rounded-2xl overflow-hidden shadow-2xl border-4 border-white z-10">
+    <iframe 
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3741.461542382832!2d85.8109348!3d20.3225432!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a1909ac76f4bcbb%3A0xbd1e58156df266b2!2sGrand%20Lumbini%20Convention!5e0!3m2!1sen!2sin!4v1746688616044!5m2!1sen!2sin" 
+      class="absolute top-0 left-0 w-full h-full border-0 rounded-2xl"
+      allowfullscreen="" 
+      loading="lazy" 
+      referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+  </div>
+</section>
+
       
       <!-- Footer -->
 <footer id="page-footer" class="relative w-full bg-black text-white text-center font-[Walbaum]">
@@ -1352,23 +1477,7 @@
         });
     </script>
 
-    <script>
-      const swiper = new Swiper(".mySwiper", {
-    loop: true,
-    autoplay: {
-        delay: 5000, // Time image stays before changing
-        disableOnInteraction: false,
-    },
-    speed: 6000, // Transition duration: 6 seconds
-    effect: 'fade',
-    fadeEffect: {
-        crossFade: true
-    }
-});
-
-
-    </script>
-    
+   
     <script>
         function scrollCarousel(direction) {
             const carousel = document.getElementById('service-carousel');
@@ -1388,6 +1497,9 @@
     });
   });
 </script>
+
+
+
 
 
 
